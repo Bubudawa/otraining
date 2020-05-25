@@ -1,8 +1,8 @@
-# /vendor
-# /wp
+/vendor
+/wp
 # wp-config.php
-# /content/languages
-# /content/upgrade
-# /content/uploads
-# /content/plugins/*
-# /content/themes/*
+/content/languages
+/content/upgrade
+/content/uploads
+/content/plugins/*
+/content/themes/*

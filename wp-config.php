@@ -29,7 +29,7 @@ define( 'DB_USER', 'training' );
 define( 'DB_PASSWORD', 'training1234' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'ec2-3-86-149-137.compute-1.amazonaws.com' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -65,7 +65,7 @@ define('NONCE_SALT',       '47Dr-<,|K$_.B%/G YQ0jSl$}M;nw{:L,(9AE1+aqJFr`/8w|Dbp
 $table_prefix = 'wp_';
 
 // https://www.php.net/manual/fr/function.rtrim.php
-define('WP_HOME', rtrim('http://ec2-3-86-149-137.compute-1.amazonaws.com/otraining/wp_Otraining/', '/'));
+define('WP_HOME', rtrim('http://localhost/otraining/wp_Otraining/', '/'));
 define('WP_SITEURL', WP_HOME . '/wp');
 define( 'WP_CONTENT_URL', WP_HOME . '/content' );
 define( 'WP_CONTENT_DIR', dirname( ABSPATH ) . '/content' );
@@ -130,6 +130,10 @@ define( 'DISALLOW_FILE_EDIT', true ); // Désactivation de l'éditeur embarqué 
 define( 'AUTOMATIC_UPDATER_DISABLED', true ); // Désactivation des mises à jour automatiques de WordPress
 define( 'WP_AUTO_UPDATE_CORE', false ); // Désactivation des mises à jour du cœur de WordPress
 /* That's all, stop editing! Happy publishing. */
+
+//JWT
+define('JWT_AUTH_SECRET_KEY', 's`S(+AY37!&B+-g#}y3Zj+6+.C9c1SwTrwgsrfauSrYVa!L?PVU+_^J%eB@+C;GY');
+define('JWT_AUTH_CORS_ENABLE', true);
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
