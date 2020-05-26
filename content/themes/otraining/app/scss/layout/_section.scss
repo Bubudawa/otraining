@@ -1,0 +1,21 @@
+.categories{
+    &__title {
+        margin-top: 1rem;
+        padding: 1rem;
+        font-size: 1.6rem;
+    }
+    &__list {
+        margin-left: 25%;
+        padding: 1em;
+        font-size: 1.2em;
+        li{
+            line-height: 1.5em;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    &__button {
+        text-align: center;
+    }
+}

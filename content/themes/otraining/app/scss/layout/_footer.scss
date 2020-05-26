@@ -1,0 +1,22 @@
+.navbar__burger {
+    display: none;
+}
+
+.footer__teacher__button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    //text-align: center;
+}
+
+.footer__teacher {
+    //background-color: $color1;
+    background-image: url('../assets/images/laptop.png');
+    background-repeat: no-repeat;
+    height: 200px;
+    background-color: #182440;
+
+    background-size: contain;
+    background-position: center;
+}

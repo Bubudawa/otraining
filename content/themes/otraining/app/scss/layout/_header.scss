@@ -1,0 +1,50 @@
+header {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.banner {
+    position: relative;
+    align-content: center;
+    height: 50vh;
+    
+    
+    // border: 5px solid red;
+    text-align: center;
+    background-image: url('https://source.unsplash.com/500x500/?cat');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+ 
+    &__title {
+        margin: 1rem;
+    }
+
+    &__content {
+        margin: 1rem;
+    }
+
+    &__button {
+        margin: 1rem;
+    }
+}
+
+.description {
+    width: 50%;
+    position: relative;
+    bottom: -25%;
+    left: 24.8%;
+    background-color: $color1;
+    opacity: 0.7;
+    color: $white;
+    text-shadow: $black;
+    padding: 2px;
+
+}
+
+.navbar {
+    background-color: $color5;
+}

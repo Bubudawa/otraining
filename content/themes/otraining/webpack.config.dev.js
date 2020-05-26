@@ -66,6 +66,31 @@ let config = {
           }
         ]
       },
+      // Fonts
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',
+            publicPath: '../fonts',
+            esModule: false
+          }
+        },
+      },
+                  // Images
+      {
+        test: /\.(jpg|jpeg|png|gif|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]', // Nom du fichier généré
+            outputPath: 'images/', // Destination du fichier généré dans le répertoire public
+            publicPath: '../images' // Chemin relatif depuis le fichier CSS vers le dossier des images
+          }
+        }
+      }
     ]
   },
   // Configuration du serveur de développement qui rechargera automatiquement les contenus lors d'un changement
