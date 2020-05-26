@@ -1,41 +1,42 @@
-.famous__formation {
+.famous-training {
 
     &__categories {
         margin-top: 1rem;
-        padding: 1rem;
-        // margin-left: 1rem;
         font-size: 1.6rem;
     }
 
     &__single {
+        display: flex;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        margin: 3rem;
+
+        &__image {
+            height: 30vh;
+            width:50vh;
+            background-image: url('https://source.unsplash.com/250x250/?dog');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    
+        &__title {
+                margin-top: 0.5rem;
+                font-family: $font-family-title;
+                font-size: 1.8rem;
+        }
+    
+        &__author {
+                font-size: 1.4rem;
+        }
+
     }
+
 }
 
 
-.single {
-    display: flex;
-    justify-content: center;
 
 
 
-    &__image{
-        height: 30vh;
-        width:50vh;
-        background-image: url('https://source.unsplash.com/250x250/?dog');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
 
-    &__title {
-            font-family: $font-family-title;
-            font-size: 2rem;
-            border: blue 2px solid;
-    }
+    
 
-    &__author {
-            font-size: 2rem;
-            border: blue 2px solid;
-    }
-}
