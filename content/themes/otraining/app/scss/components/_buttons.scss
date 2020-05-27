@@ -1,10 +1,23 @@
 .button{
     font-weight: bold;
-    padding: 0.5em;
+    padding: 0.8rem;
     text-decoration: none;
     margin: 1em;
     color: $color5;
     background-color: $color2;
     border-radius: 7px;
     border: none;
+    font-size: 1rem;
 }
+
+// .button-log {
+//     font-weight: bold;
+//     padding: 0.4rem;
+//     text-decoration: none;
+//     margin: 0 0.3rem 0 0.3rem;
+//     color: $color5;
+//     background-color: $color2;
+//     border-radius: 7px;
+//     border: none;
+//     font-size: 0.8rem;
+// }

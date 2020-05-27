@@ -1,37 +1,116 @@
 .famous-training {
-
     &__categories {
-        margin-top: 1rem;
-        font-size: 1.6rem;
+        font-family: $font-family-categories;
+        margin-top: 2rem;
+        padding-left: 2rem;
+        font-size: 1.4rem;
     }
 
+
     &__single {
+        // width: 20rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 3rem;
 
         &__image {
-            height: 30vh;
-            width:50vh;
-            background-image: url('https://source.unsplash.com/250x250/?dog');
-            background-size: cover;
-            background-repeat: no-repeat;
+            img{
+                display: block;
+                margin-left: auto;
+                width: 80%;
+                margin-right: auto;
+            }
+            // background-image: url('../assets/images/header.jpg');
+            // background-size: cover;
+            // background-repeat: no-repeat;
         }
-    
-        &__title {
-                margin-top: 0.5rem;
-                font-family: $font-family-title;
-                font-size: 1.8rem;
-        }
-    
-        &__author {
-                font-size: 1.4rem;
-        }
+
+            &__title {
+                margin-left: auto;
+                width: 80%;
+                margin-right: auto;
+                    margin-top: 0.5rem;
+                    font-family: $font-family-title;
+                    font-size: 1.8rem;
+            }
+
+
+            &__pricetime {
+                margin-left: auto;
+                width: 80%;
+                margin-right: auto;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 0.5rem;
+                font-size: 1.2em;
+            }
+
+            &__author {
+                margin-left: auto;
+                width: 80%;
+                margin-right: auto;
+                font-size: 1.2rem;
+
+                a {
+                    text-decoration: none;
+                }
+
+            }
 
     }
 
 }
+#search {
+    display: none;
+}
+
+.fa-search {
+    display: none;
+}
+
+@media (min-width: $breakpoint-medium)
+ {
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .famous-training__single {
+        width: 50vw;
+        margin: 0rem;
+    }
+
+ }
+
+ @media (min-width: $breakpoint-large)
+ {
+     .famous-training__single{
+         width: 33vw;
+     }
+
+     #search {
+         display: inline;
+         border-radius: 5px;
+         box-shadow: 2px 2px 2px $color1;
+     }
+
+     .menu-burger {
+         display: none;
+     }
+     
+     .fa-search {
+        display: inline;
+    }
+    
+    .session {
+        display: inherit;
+    }
+ }
+
+
+
+
 
 
 

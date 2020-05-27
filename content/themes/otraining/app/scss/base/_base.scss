@@ -3,9 +3,21 @@ html {
 }
 
 html, body {
-    background-color: $color4;
+    background-color: #c1c8e4;
     font-family: $font-family-content;
+    
 }
 
+a {
+    color: $color2;
+    text-decoration: none;
+
+
+    &:hover {
+        color: $color3;
+        text-decoration: underline;
+    }
+
+}
 
 

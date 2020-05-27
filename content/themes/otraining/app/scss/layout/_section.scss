@@ -1,15 +1,17 @@
 .categories{
+
     &__title {
+        font-family: $font-family-categories;
         margin-top: 1rem;
-        padding: 1rem;
+        padding-left: 2rem;
         font-size: 1.6rem;
     }
     &__list {
         margin-left: 15%;
-        padding: 1em;
+        padding: 1rem;
         font-size: 1.2em;
         li{
-            line-height: 1.5em;
+            line-height: 2.5rem;
             a{
                 text-decoration: none;
             }
