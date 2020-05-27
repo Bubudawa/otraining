@@ -1,6 +1,6 @@
 /vendor
 /wp
-# wp-config.php
+/wp-config.php
 /content/languages
 /content/upgrade
 /content/uploads
