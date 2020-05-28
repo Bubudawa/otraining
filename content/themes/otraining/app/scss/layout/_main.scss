@@ -69,6 +69,12 @@
     display: none;
 }
 
+.categories-dynamique__list{
+    display: none;
+}
+
+
+
 @media (min-width: $breakpoint-medium)
  {
     .wrapper {
@@ -90,21 +96,121 @@
      }
 
      #search {
+         height: 1.4rem;
          display: inline;
-         border-radius: 5px;
-         box-shadow: 2px 2px 2px $color1;
+         border-radius: 0.5rem;
+         box-shadow: 0.1rem 0.1rem 0.1rem $color1;
      }
 
      .menu-burger {
          display: none;
      }
-     
+
+     .navbar__formations {
+        display: inherit;
+    }
+
      .fa-search {
         display: inline;
     }
-    
+
     .session {
         display: inherit;
+    }
+
+    .footer-wrapper {
+        padding: 1.5rem 0;
+        // border: chocolate solid 2px;
+        display: inherit !important;
+        background-color: $color2;
+        
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+        a:hover {
+                text-decoration: underline;
+                color: $color4;
+        }
+        
+    }
+
+    .footer__teacher {
+        display: none !important;;
+    }
+
+    .footer__menu {
+        // border: red solid 2px;
+        display: flex;
+        justify-content: space-around;
+
+        &__categories {
+
+        }
+
+        &__menu {
+
+        }
+    }
+
+    .footer__end {
+        padding: 1.5rem 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+
+        &__copy {
+            color: $color1;
+        }
+        &__social {
+            color: $white;
+        }
+
+    }
+
+    .categories-dynamique__list {
+        display: inline;
+    }
+
+    .categories-dynamique__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.6rem;
+    
+        &-one {
+            padding: 5vh 4vw;
+            border-bottom: 2px solid #325A73;
+            border-radius: 30px;
+            margin-right: 1vw;
+        }
+    
+        &-two {
+            padding: 5vh 4vw;
+            border-bottom: 2px solid #325A73;
+            // border-right: 2px solid #325A73;
+            // border-left: 2px solid #325A73;
+            border-radius: 30px;
+            margin-right: 1vw;
+        }
+    
+        &-three {
+            padding: 5vh 4vw;
+            border-bottom: 2px solid #325A73;
+            border-radius: 30px;
+            margin-right: 1vw;
+        }
+    
+        &-four {
+            padding: 5vh 4vw;
+            border-bottom: 2px solid #325A73;
+            border-radius: 30px;
+        }
+    }
+
+    .categories__list {
+        display: none;
     }
  }
 

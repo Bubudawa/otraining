@@ -11,6 +11,9 @@
 
     const closeModalByWrapper = document.querySelector('.wrapper');
     closeModalByWrapper.addEventListener('click', app.handleCloseMenu);
+
+    const filterSelectedFirst = document.querySelector('.categories-dynamique__list-one');
+    filterSelectedFirst.addEventListener('click', app.firstFilter);
   },
 
   handleOpenMenu: function(){
@@ -29,7 +32,14 @@
     seeBurgerModal.classList.remove('fs');
     const seeBurgerCross = document.querySelector('.menu-bg');
     seeBurgerCross.classList.remove('fs');
+  },
+
+  firstFilter: function(){
+    const seeFirstFilter = document.querySelector('.categories-dynamique__list-one');
+    seeFirstFilter.classList.add('active');
+    app.log();
   }
+
 };
 
 $(app.init);
