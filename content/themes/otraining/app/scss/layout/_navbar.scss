@@ -1,0 +1,40 @@
+.navbar{
+//TODO http://paulgruson.fr/2014/05/06/tuto-css-barre-de-navigation-fixe-sticky-nav/
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: $color5;
+
+    
+        &__logo {
+            
+            text-transform: uppercase;
+            a {
+            text-decoration: none;
+            margin: 0.5rem;
+            font-size: 1.5em;
+            }
+        }
+
+    }
+
+    .navbar__formations {
+        display: none;
+    }
+
+
+    .session {
+        display: none;
+
+        &__log-in {
+            margin: 0 1rem;
+            font-size: 1.1rem;
+        }
+
+        &__sign-up {
+            margin: 0 1rem;
+            font-size: 1.1rem;
+        }
+    }
+

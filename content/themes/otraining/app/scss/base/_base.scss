@@ -1,0 +1,23 @@
+html {
+    font-size: 62,5%;
+}
+
+html, body {
+    background-color: #c1c8e4;
+    font-family: $font-family-content;
+    
+}
+
+a {
+    color: $color2;
+    text-decoration: none;
+
+
+    &:hover {
+        color: $color3;
+        text-decoration: underline;
+    }
+
+}
+
+

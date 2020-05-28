@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.banner {
+    position: relative;
+    height: 50vh;
+    text-align: center;
+    background-image: url('../assets/images/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+ 
+    &__title {
+        font-size: 1.8rem;
+        margin: 1rem;
+    }
+
+    &__content {
+        font-size: 1.3rem;
+        margin: 1rem;
+    }
+
+    &__button {
+        margin: 1rem;
+        font-size: 2rem;
+    }
+}
+
+
+.description {
+    position: relative;
+    bottom: -25%;
+    color: $white;
+    text-shadow: 2px 2px 2px $color1; 
+    padding: 2px;
+
+}
+

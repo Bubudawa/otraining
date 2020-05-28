@@ -1,0 +1,39 @@
+
+
+.navbar__burger {
+    visibility: hidden;
+
+    &__copyright{
+        text-align: center;
+    }
+}
+
+.footer-wrapper {
+    display: none;
+}
+
+
+.footer__teacher {
+    background-color: #182440;
+    display: flex;
+    flex-direction: column;
+    background-size: contain;
+    background-position: center;
+
+
+    img {
+        display: inline-block;
+        margin: auto;
+        width: 60%;
+    }
+
+
+    &__button {
+        text-align: center;
+
+
+        &__content {
+    
+        }
+    }
+}
