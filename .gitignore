@@ -3,7 +3,7 @@ content/themes/otraining/node_modules
 
 /vendor
 /wp
-# wp-config.php
+# # wp-config.php
 /content/languages
 /content/upgrade
 /content/uploads
@@ -11,5 +11,4 @@ content/themes/otraining/node_modules
 !/content/themes/
 /content/themes/*
 !/content/themes/otraining
-!/content/plugins/
-/content/plugins/*
+!/content/plugins/*
