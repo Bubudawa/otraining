@@ -12,3 +12,4 @@ wp-config.php
 /content/themes/*
 !/content/themes/otraining
 !/content/plugins/*
+!/content/themes/otraining/public
