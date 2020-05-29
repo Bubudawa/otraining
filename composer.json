@@ -8,7 +8,8 @@
     "require": {
         "johnpbloch/wordpress": "*",
         "wpackagist-plugin/akismet": "*",
-        "wpackagist-theme/twentytwenty": "*"
+        "wpackagist-theme/twentytwenty": "*",
+        "wpackagist-plugin/advanced-custom-fields": "^5.8"
     },
     "extra": {
         "wordpress-install-dir": "wp",
