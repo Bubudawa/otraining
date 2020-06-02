@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99f62819827bc8353e67da25ab3fa8ed",
+    "content-hash": "8c8629dddf6f5fdb3cd0cc99beb55258",
     "packages": [
         {
             "name": "composer/installers",
@@ -278,6 +278,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
+        },
+        {
+            "name": "wpackagist-plugin/advanced-custom-fields-font-awesome",
+            "version": "3.1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields-font-awesome/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields-font-awesome.zip?timestamp=1582669087"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-custom-fields-font-awesome/"
         },
         {
             "name": "wpackagist-plugin/akismet",

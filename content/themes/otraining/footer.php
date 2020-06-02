@@ -30,9 +30,9 @@
           </div>
           <div class="footer__menu__session">
             <ul>
-              <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>S'inscrire</a></li>
-              <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>Se connecter</a></li>
-              <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Devenez Formateur</a></li>
+              <li><a href="template-parts/signin"><i class="fa fa-sign-in" aria-hidden="true"></i>S'inscrire</a></li>
+              <li><a href="template-parts/login"><i class="fa fa-user-circle" aria-hidden="true"></i>Se connecter</a></li>
+              <li><a href="template-parts/signin"><i class="fa fa-user-plus" aria-hidden="true"></i>Devenez Formateur</a></li>
             </ul>
           </div>      
       </div>
@@ -57,11 +57,10 @@
             <i class="fa fa-linkedin-square" aria-hidden="true"></i>
           </div>
       </div>
-      <?php wp_footer(); ?>
+
       </section>
     </footer>
-    
-
   <script src="js/app.js"></script>
+  <?php wp_footer(); ?>
 </body>
 </html>

@@ -14,6 +14,7 @@ class OFormation
 {
     public function __construct()
     {
+        add_theme_support( 'post-thumbnails' );
         add_action('init', [$this, 'create_cpt']);
     }
 

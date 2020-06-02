@@ -5,18 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <?php wp_head(); ?>
-  <title>O'training</title>
-  
+ 
 </head>
 <body>
     <header>
       <div class="navbar">
         <div class="navbar__logo">
-          <a href="#">O'training</a>
+          <a href="<?php echo home_url(); ?>">O'training</a>
         </div>
+
+        <div class="menu-desktop">
+          <ul id="menu">
+            <li>
         <div class="navbar__formations">
-            <a href="#" class="session__log-in"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>Formations</a>
+            <a href="#" class="drop menu-title session__log-in"><i class="drop fa fa-chevron-circle-down" aria-hidden="true"></i>Formations</a>
         </div>
+
+        <div class="dropdown_4columns">
+                           
+          <div class="col_1 col_categories">
+                               
+            <h3>Catégories de Formation</h3>
+              <ul>
+                <li><a href="#">Art</a></li>
+                <li><a href="#">Musique</a></li>
+                <li><a href="#">Immobilier</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li><a href="#">Informatique</a></li>
+                <li><a href="#">Art</a></li>
+                <li><a href="#">Musique</a></li>
+                <li><a href="#">Immobilier</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li><a href="#">Informatique</a></li>
+              </ul>   
+                                    
+          </div>
+                       
+          <div class="col_1">
+                               
+            <p>Nouveau sur le site ? Faite un tour sur nos formations 100% gratuites</p>  
+            <button class="col_button">Formations gratuite</button>
+            <p>Vous souhaitez partager vos connaissances en creant facilement une formation ?</p>  
+            <button class="col_button">Devenez Formateur</button>
+                                  
+                                    
+            </div>
+                       
+            <div class="col_1">
+           
+              <p class= "strong">Eleves ou formateur, l'inscription à o'training est 100% gratuite !</p>
+                <ul class="inline">
+                  <li><a href="#">A propos</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Aide</a></li>
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </ul>
+            </div>
+         </div>
+      </li>
+   </ul>
+</div>
         <form action="">
           <p>
             <input type="search" id="search" value="Recherchez" placeholer="">
@@ -46,22 +97,9 @@
           </p>
           
 
-          <!-- <p class="navbar__burger__copyright">Copyright 2020 <i class="fa fa-copyright" aria-hidden="true"></i>- O'training</p> -->
         </div>
         <div class="session">
-          <a href="#" class="session__log-in">Connexion</a>
-          <a href="#" class="session__sign-up">Inscription</a>
+          <a href="template-parts/login" class="session__log-in">Connexion</a>
+          <a href="template-parts/signin" class="session__sign-up">Inscription</a>
         </div>
       </div>
-      <div class="banner">
-        <div class="description">
-          <h1 class="banner__title">Progressez à votre rythme :</h1>
-          <p class="banner__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div class="banner__button">
-            <a href="#">
-              <button class="button">Formations gratuites</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
