@@ -1,19 +1,10 @@
 <?php get_header(); ?>
 <?php
 
-$args = [
-  'post_type' => 'post', //mettre training
-  'posts_per_page' => '1'
-];
+if (have_posts()): while (have_posts()): the_post();
+    get_template_part('template-parts/home/banner');
+endwhile; endif;
 
-$wpqueryTrainings = new WP_Query($args);
-
-if ($wpqueryTrainings->have_posts()) : while
-($wpqueryTrainings->have_posts()) : $wpqueryTrainings->the_post();
-        get_template_part('template-parts/home/banner');
-
-    endwhile;
-endif;
 
 ?>
     <main>
@@ -74,10 +65,13 @@ endif;
              
               <!-- menu category for desktop -->
               <div class="categories-dynamique__list">
+            
               <?php
 
         $args = [
-          'post_type' => 'categoriedesk'
+          'post_type' => 'categorie',
+          'meta_key' => 'category',
+          'meta_value' => true
         ];
 
           $wpquerySkills = new WP_Query($args);
@@ -93,7 +87,7 @@ endif;
               </div>
               <div class="content__first"></div>
               <div class="categories__button">
-                <a href="#">
+              <a href="<?php bloginfo('url'); ?>/catalogue/">
                   <button class="button">Voir le catalogue</button>
                 </a>
               </div>

@@ -68,12 +68,9 @@
       </li>
    </ul>
 </div>
-        <form action="">
-          <p>
-            <input type="search" id="search" value="Recherchez" placeholer="">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </p>
-        </form>
+<div class="jirei-post-list">
+          <?php echo do_shortcode('[ivory-search id="107" title="Default Search Form"]'); ?>
+        </div>
         <div class="menu-bg"></div>
         <div class="menu-burger"><i class="fa fa-bars" aria-hidden="true"></i>
           <i class="fa fa-close" aria-hidden="true"></i></div>
@@ -100,6 +97,6 @@
         </div>
         <div class="session">
           <a href="template-parts/login" class="session__log-in">Connexion</a>
-          <a href="template-parts/signin" class="session__sign-up">Inscription</a>
+          <a href="template-parts/signup" class="session__sign-up">Inscription</a>
         </div>
       </div>

@@ -16,6 +16,7 @@ class OFormation
     {
         add_theme_support( 'post-thumbnails' );
         add_action('init', [$this, 'create_cpt']);
+        add_action('init', [$this, 'register_taxonomies']);
     }
 
     public function create_cpt()
@@ -60,9 +61,42 @@ class OFormation
         );
     }
 
+    public function register_taxonomies() {
+        register_taxonomy(
+            'category',
+            'formation',
+            [
+                'label' => 'Catégories',
+                'public' => true,
+                'hierarchical' => true,
+                'show_admin_column' => true,
+                'rewrite' => [
+                    'slug' => 'category'
+                ]
+
+            ]
+        );
+
+        register_taxonomy(
+            'tag',
+            'formation',
+            [
+                'label' => 'Tags',
+                'public' => true,
+                'hierarchical' => true,
+                'show_admin_column' => true,
+                'rewrite' => [
+                    'slug' => 'tag'
+                ]
+
+            ]
+        );
+    }
+
     public function oformation_activate()
     {
         $this->create_cpt();
+        $this->register_taxonomies();
         flush_rewrite_rules();
     }
 
