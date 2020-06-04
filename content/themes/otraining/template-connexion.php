@@ -1,13 +1,15 @@
 <?php
 /*
-Template Name: Login
+Template Name: Connexion
 */
 ?>
 
 <?php get_header(); ?>
 
-
-
+<div class="login-text">
+    <h2>Connexion</h2>
+    <p>Si vous n'avez pas encore de compte : <a href="<?php echo home_url(); ?>/inscription">cliquez ici pour vous inscrire</a>.</p>
+</div>
 <div class="login__container">
     <div class="login__connexion">
         <div class="login__content">
@@ -37,21 +39,29 @@ Template Name: Login
                 }
             ?>
 
-            <?php
-            
-                wp_login_form(
 
-                    ['redirect' => site_url('wp-admin/')
+<?php
 
-                    ]
-                )
-            ?>
-<!-- 
-                <div class="login-signup">
-                    <a href="../signup.php"><p>Se Créer un compte</p></a>
-                </div> -->
+
+
+        if (!is_user_logged_in()) {
+            wp_login_form(
+                ['redirect' => site_url('wp-admin/')
+
+            ]
+            );
+        }
+        else {
+            echo '<p>Vous êtes déjà connecté.</p>';
+        }
+     ?>
+    
+
 
 
         </div>
     </div>
 </div>
+
+
+<?php get_footer(); ?>

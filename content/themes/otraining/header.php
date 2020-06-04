@@ -43,10 +43,10 @@
                        
           <div class="col_1">
                                
-            <p>Nouveau sur le site ? Faite un tour sur nos formations 100% gratuites</p>  
-            <button class="col_button">Formations gratuite</button>
+          <p>Nouveau sur le site ? Faite un tour sur nos formations 100% gratuites</p>  
+            <a href="<?php echo home_url(); ?>/inscription"><button class="col_button">Formations gratuite</button></a>
             <p>Vous souhaitez partager vos connaissances en creant facilement une formation ?</p>  
-            <button class="col_button">Devenez Formateur</button>
+            <a href="<?php echo home_url(); ?>/devenir-formateur"><button class="col_button">Devenez Formateur</button></a>
                                   
                                     
             </div>
@@ -55,9 +55,9 @@
            
               <p class= "strong">Eleves ou formateur, l'inscription à o'training est 100% gratuite !</p>
                 <ul class="inline">
-                  <li><a href="#">A propos</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Aide</a></li>
+                  <li><a href="<?php echo home_url(); ?>/a-propos">A propos</a></li>
+                  <li><a href="<?php echo home_url(); ?>/contact">Contact</a></li>
+                  <li><a href="<?php echo home_url(); ?>/aide">Aide</a></li>
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                   <i class="fa fa-instagram" aria-hidden="true"></i>
@@ -79,12 +79,12 @@
             <input type="text" placeholder="Recherchez">
             <i class="fa fa-search" aria-hidden="true"></i>
           </form>
-          <a href="#">Formations</a>
-          <a href="#">A propos</a>
-          <a href="#">Contact</a>
-          <a href="#">Connexion</a>
-          <a href="#">Inscription</a>
-          <a href="#">Aide</a>
+          <a href="<?php echo home_url(); ?>/catalogue">Formations</a>
+          <a href="<?php echo home_url(); ?>/a-propos">A propos</a>
+          <a href="<?php echo home_url(); ?>/contact">Contact</a>
+          <a href="<?php echo home_url(); ?>/connexion">Connexion</a>
+          <a href="<?php echo home_url(); ?>/inscription">Inscription</a>
+          <a href="<?php echo home_url(); ?>/aide">Aide</a>
           <i class="fa fa-facebook" aria-hidden="true"></i>
           <i class="fa fa-twitter" aria-hidden="true"></i>
           <i class="fa fa-instagram" aria-hidden="true"></i>
@@ -92,11 +92,12 @@
           <p>
             Copyright 2020 - O'training
           </p>
-          
+
 
         </div>
         <div class="session">
-          <a href="template-parts/login" class="session__log-in">Connexion</a>
-          <a href="template-parts/signup" class="session__sign-up">Inscription</a>
+          <a href="<?php echo home_url(); ?>/connexion" class="session__log-in">Connexion</a>
+          <a href="<?php echo home_url(); ?>/inscription" class="session__sign-up">Inscription</a>
         </div>
       </div>
+    </header>

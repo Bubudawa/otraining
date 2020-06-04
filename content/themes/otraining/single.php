@@ -28,6 +28,13 @@ get_header();
 
 </div>
 
+<form onsubmit="subscribephp();" method="POST">
+<button type="submit" onsubmit="subscribephp();">Click me</button>
+
+  <input class="" type="submit" onsubmit="subscribephp();" value="S'inscrire à la formation">
+
+</form>
+
 <?php the_excerpt(); ?>
 
 <?php get_footer(); ?>

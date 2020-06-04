@@ -22,4 +22,6 @@
         <a href="#"><i class="fa fa-user" aria-hidden="true"></i><?php the_author_link(); ?></a>
     </div>
 
+    
+
 </div>

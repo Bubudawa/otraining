@@ -7,7 +7,7 @@ Template Name: Catalogue
 <label for="categories">
     choisissez une catégorie:</label>
 <form method="POST">
-<select style="width:12%;"name="categories" id="list"">
+<select style="width:12%;"name="categories" id="list">
 <option aria-placeholder="toutes les categories"> </option>
 
 <?php
