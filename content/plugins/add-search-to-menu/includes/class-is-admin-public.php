@@ -82,8 +82,9 @@ class IS_Admin_Public {
 			'fields'         => 'ids',
 			'no_found_rows'  => true,
 			'posts_per_page' => -1,
-                        'orderby'	 => 'Date',
-                        'order'		 => 'DESC',
+            'orderby'	 => 'Date',
+            'order'		 => 'DESC',
+            'suppress_filters' => true,
 		));
 
 		$meta_query = new WP_Query( $query_args );

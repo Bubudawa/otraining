@@ -5,7 +5,7 @@ Tags: search, woocommerce search, image search, ajax search, search shortcode, l
 Requires at least: 3.9
 Tested up to: 5.4
 Requires PHP: 5.2.4
-Stable tag: 4.4.8
+Stable tag: 4.4.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -191,6 +191,10 @@ Yes we do. We try our best to help free users with customisation requests and we
 8. Plugin Settings
 
 == Changelog ==
+
+= 4.4.9 =
+* Fixed - Admin area search forms listing conflict with WPML plugin.
+* Fixed - Lazy loading issue by replacing ajax loader image with span tag.
 
 = 4.4.8 =
 * Fixed - Array and string offset access syntax with curly braces is deprecated.

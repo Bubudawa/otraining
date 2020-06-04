@@ -19,13 +19,9 @@ class IS_Deactivator {
 	 */
 	public static function deactivate() {
 
-		$is = Ivory_Search::getInstance();
+		delete_option( 'is_notices');
+		delete_option( 'is_install');
 
-		if ( isset( $is->opt['is_notices']['config'] ) ) {
-			$is_notices = get_option( 'is_notices', array() );
-			unset( $is_notices['is_notices']['config'] );
-			update_option( 'is_notices', $is_notices );
-		}
 		$dismissed = explode( ',', (string) get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
 		$version = '1_0'; // replace all periods in 1.0 with an underscore
 		$prefix = 'is_admin_pointers_' . $version . '_';

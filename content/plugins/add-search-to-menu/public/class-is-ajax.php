@@ -622,7 +622,7 @@ class IS_Ajax {
 	function author_markup( $field ) {
 		if ( isset( $field['show_author'] ) && $field['show_author'] ) { ?>
 		    <span class="author vcard">
-		        <?php _ex( '<i>By</i> ', 'Article written by', 'add-search-to-menu' ); ?>
+		        <?php echo sprintf( '<i>%s</i>', _ex( 'By', 'Article written by', 'add-search-to-menu' ) ); ?>
 		        <a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
 		            <?php echo esc_html( get_the_author() ); ?>
 		        </a>
@@ -674,7 +674,7 @@ class IS_Ajax {
                 <?php $terms = get_the_terms( $post->ID, $post->post_type.'_tag' );
                 if ( $terms && ! is_wp_error( $terms ) ) { ?>
                 <span class="is-meta-tag">
-                    <?php _e( '<i>Tagged with:</i> ', 'add-search-to-menu' ); ?>
+                    <?php echo sprintf( '<i>%s</i>', __( 'Tagged with:', 'add-search-to-menu' ) ); ?>
                     <span class="is-tags-links">
                     <?php foreach ( $terms as $key => $term ) { if ( $key ) { echo ', '; }?><a href="<?php echo get_term_link( $term->term_id, $post->post_type.'_tag' ); ?> " rel="tag"><?php echo $term->name; ?></a><?php } ?>
                     </span>
@@ -699,7 +699,7 @@ class IS_Ajax {
                 $terms = get_the_terms( $post->ID, $tax_name );
                 if ( $terms && ! is_wp_error( $terms ) ) { ?>
                 <span class="is-meta-category">
-                    <?php _e( '<i>Categories:</i> ', 'add-search-to-menu' ); ?>
+                    <?php echo sprintf( '<i>%s</i>', __( 'Categories:', 'add-search-to-menu' ) ); ?>
                     <span class="is-cat-links">
                     <?php foreach ( $terms as $key => $term ) { if ( $key ) { echo ', '; } ?><a href="<?php echo get_term_link( $term->term_id, $tax_name ); ?> " rel="tag"><?php echo $term->name; ?></a><?php } ?>
                     </span>
@@ -780,7 +780,7 @@ class IS_Ajax {
 			// Show SKU.
 			if( isset( $field['show_sku'] ) && $field['show_sku'] ) {
 				$sku = $product->get_sku();
-				echo '<span class="sku"><i>SKU:</i> '.esc_html( $sku ).'</span>';
+				echo '<span class="sku"><i>'.__( 'SKU:', 'add-search-to-menu' ).'</i> '.esc_html( $sku ).'</span>';
 			}
 		}
 	}

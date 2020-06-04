@@ -71,6 +71,7 @@ class IS_Search_Form {
 			'offset'		 => 0,
 			'orderby'		 => 'ID',
 			'order'			 => 'ASC',
+			'suppress_filters' => true,
 		);
 
 		$args = wp_parse_args( $args, $defaults );
@@ -126,7 +127,7 @@ class IS_Search_Form {
 	}
 
 	public function __get( $name ) {
-		$message = __( '<code>%1$s</code> property of a <code>IS_Search_Form</code> object is <strong>no longer accessible</strong>. Use <code>%2$s</code> method instead.', 'add-search-to-menu' );
+		$message = '<code>%1$s</code> '.__( 'property of a', 'add-search-to-menu' ).' <code>IS_Search_Form</code> '.__( 'object is', 'add-search-to-menu' ).' <strong>'.__( 'no longer accessible', 'add-search-to-menu' ).'</strong>. '.__( 'Use', 'add-search-to-menu' ).' <code>%2$s</code> '.__('method instead.', 'add-search-to-menu' );
 
 		if ( 'id' == $name ) {
 			if ( WP_DEBUG ) {
@@ -482,7 +483,7 @@ class IS_Search_Form {
                 if ( isset( $_ajax['enable_ajax'] ) ) {
                     $loader_image = isset( $settings['loader-image'] ) ? $settings['loader-image'] : IS_PLUGIN_URI . 'public/images/spinner.gif';
                     if ( $loader_image ) {
-                            $result .= '<img class="is-loader-image" alt="'. esc_attr__( "Loader Image", 'add-search-to-menu' ) .'" style="display: none;" src="'.$loader_image.'" />';
+                            $result .= '<span class="is-loader-image" style="display: none;background-image:url('.$loader_image.');" ></span>';
                     }
                 }
                 $result .= '</label>';

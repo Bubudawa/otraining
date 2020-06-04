@@ -236,19 +236,18 @@ class IS_Admin
                 
                 if ( !isset( $this->opt['is_notices']['config'] ) || !$this->opt['is_notices']['config'] ) {
                     $url = ( is_network_admin() ? network_site_url() : site_url( '/' ) );
-                    echo  '<div class="notice ivory-search"><p>' . sprintf(
-                        __( 'Thank you for using <strong>Ivory Search</strong> plugin. You can configure its <a href="%1$s">settings</a> and get support on <a href="%2$s" target="_blank">support forum</a> or <a href="%3$s" target="_blank">contact us</a>.', 'add-search-to-menu' ),
-                        $url . 'wp-admin/admin.php?page=ivory-search',
-                        'https://ivorysearch.com/support/',
-                        'https://ivorysearch.com/contact/'
-                    ) ;
-                    echo  '<a class="is-notice-dismiss" href="' . add_query_arg( 'is_dismiss', 'notice_config' ) . '">' . __( 'Dismiss', 'add-search-to-menu' ) . '</a></p></div>' ;
+                    echo  '<div class="notice ivory-search is-notice-body"><a class="is-notice-dismiss" href="' . add_query_arg( 'is_dismiss', 'notice_config' ) . '">' . __( 'Dismiss', 'add-search-to-menu' ) . '</a><div>' ;
+                    echo  __( 'Thank you for using', 'add-search-to-menu' ) . ' <strong>Ivory Search</strong> plugin. ' ;
+                    echo  __( 'You can configure its', 'add-search-to-menu' ) . ' <a href="' . $url . 'wp-admin/admin.php?page=ivory-search">' . __( 'settings', 'add-search-to-menu' ) . '</a> ' ;
+                    echo  __( 'and get support on', 'add-search-to-menu' ) . ' <a href="https://ivorysearch.com/support/" target="_blank">' . __( 'support forum', 'add-search-to-menu' ) . '</a> ' ;
+                    echo  __( 'or', 'add-search-to-menu' ) . ' <a href="https://ivorysearch.com/contact/" target="_blank">' . __( 'contact us', 'add-search-to-menu' ) . '</a>.</div></div>' ;
+                    echo  '' ;
                 }
             
             }
             $display_review = true;
             //Don't display if dismissed
-            if ( isset( $this->opt['is_notices']['review'] ) && $this->opt['is_notices']['review'] ) {
+            if ( isset( $this->opt['is_notices']['review'] ) && $this->opt['is_notices']['review'] || isset( $_GET['is_dismiss'] ) && 'notice_review' == $_GET['is_dismiss'] ) {
                 $display_review = false;
             }
             //Don't display on seoncary screens, don't be too nagging
@@ -256,24 +255,24 @@ class IS_Admin
                 $display_review = false;
             }
             $date = get_option( 'is_install', false );
-            
             if ( $date && $display_review ) {
-                $diff = time() - strtotime( $date );
                 
-                if ( $diff > 900000 ) {
+                if ( strtotime( '-7 days' ) >= strtotime( $date ) ) {
+                    global  $current_user ;
                     echo  '<div class="is-notice notice"><div class="is-notice-image"></div><div class="is-notice-body">' ;
                     echo  '<a class="is-notice-dismiss" href="' . add_query_arg( 'is_dismiss', 'notice_review' ) . '">' . esc_html__( 'Dismiss', 'add-search-to-menu' ) . '</a>' ;
-                    echo  '<div class="is-notice-title">' . esc_html__( 'Have you found Ivory Search plugin useful?', 'add-search-to-menu' ) . '</div>' ;
-                    echo  '<div class="is-notice-content">' . esc_html__( 'We poured a lot of hours into creating it, and we\'d love it if you could give us a nice rating on the official plugin directory.', 'add-search-to-menu' ) . '</div>' ;
+                    echo  '<div class="is-notice-content">' ;
+                    printf( __( "Hey %s, it's Vinod Dalvi from %s. You have used this free plugin for some time now, and I hope you like it!", 'add-search-to-menu' ), '<strong>' . $current_user->display_name . '</strong>', '<strong>Ivory Search</strong>' );
+                    ?><br/><br/><?php 
+                    printf( __( "I have spent countless hours developing it, and it would mean a lot to me if you %ssupport it with a quick review on WordPress.org.%s", 'add-search-to-menu' ), '<strong><a target="_blank" href="https://wordpress.org/support/plugin/add-search-to-menu/reviews/?filter=5">', '</a></strong>' );
+                    echo  '</div>' ;
                     echo  '<div class="is-notice-links">' ;
-                    echo  '<a href="' . esc_url( 'https://wordpress.org/support/plugin/add-search-to-menu/reviews/?filter=5#new-post' ) . '" class="button button-primary" target="_blank" >' . esc_html__( 'Rate Ivory Search and Help Us Out', 'add-search-to-menu' ) . '</a>' ;
-                    echo  '<a href="' . esc_url( 'https://ivorysearch.com/support/' ) . '" class="button button-primary" target="_blank">' . esc_html__( 'Get Support', 'add-search-to-menu' ) . '</a>' ;
-                    echo  '<a href="' . esc_url( 'https://ivorysearch.com/contact/' ) . '" class="button button-primary" target="_blank">' . esc_html__( 'Say Hi', 'add-search-to-menu' ) . '</a>' ;
+                    echo  '<a href="' . esc_url( 'https://wordpress.org/support/plugin/add-search-to-menu/reviews/?filter=5' ) . '" class="button button-primary btn-highlight" target="_blank" >' . esc_html__( 'Review Ivory Search', 'add-search-to-menu' ) . '</a>' ;
+                    echo  '<a href="' . add_query_arg( 'is_dismiss', 'notice_review' ) . '" class="button button-primary">' . esc_html__( 'No, thanks', 'add-search-to-menu' ) . '</a>' ;
                     echo  '</div></div></div>' ;
                 }
             
             }
-        
         }
     
     }
@@ -332,15 +331,16 @@ class IS_Admin
         ?>
 		<style type="text/css">
 		/* ADMIN NOTICES */
-		.is-notice { margin:20px 0; border:none; padding:0; overflow:hidden; background:#e6e9ec; max-width:900px; }
+		.is-notice { margin:20px 0; padding:0; overflow:hidden; background:#FFF;}
+		.is-notice br {clear: none;}
 		.is-notice-dismiss { display:block; float:right; color:#999; line-height:1; margin:0 0 0 15px; text-decoration:none; }
 		.is-notice-image { float:left; margin:10px; width:90px; height:90px; background:url(<?php 
         echo  esc_url( plugins_url( 'assets/logo.png', __FILE__ ) ) ;
         ?>) no-repeat center; background-size:cover; }
-		.is-notice-body { margin:0 0 0 110px; padding:15px; background:#fff; }
-		.is-notice-title { font-size:16px; font-weight:bold; margin:0 0 5px; }
+		.is-notice-body { padding:15px; background:#fff; }
 		.is-notice-content { margin:0 0 10px; padding:0; }
-		.is-notice-links a.button { margin-right: 10px;text-decoration: none;}
+		.is-notice-links a.button { margin-right: 10px;text-decoration: none;background: #e7f2f7 !important;color: #30667b !important;}
+		.is-notice-links a.btn-highlight {background: #0071a1 !important;color: #FFF !important;}
 		</style>
 	<?php 
     }

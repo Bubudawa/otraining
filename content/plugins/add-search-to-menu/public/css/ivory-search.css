@@ -208,9 +208,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    max-height: 42px;
+    height: 25px;
     right: 5px;
     z-index: 9999;
+    width: 25px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .is-ajax-search.processing .is-loader-image {
