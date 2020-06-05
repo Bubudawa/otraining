@@ -5,7 +5,7 @@ Template Name: Catalogue
 ?>
 <?php get_header(); ?>
 <label for="categories">
-    choisissez une catégorie:</label>
+    Choisissez une catégorie:</label>
 <form method="POST">
 <select style="width:12%;"name="categories" id="list">
 <option aria-placeholder="toutes les categories"> </option>
