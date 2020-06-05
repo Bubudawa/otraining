@@ -2,11 +2,11 @@
 
 
 //admin bar hidden in Front
-// function remove_admin_bar() {
-//     add_filter('show_admin_bar', '__return_false');
-//     add_filter('admin_head', '__return_false');
-// }
-//   add_action('init', 'remove_admin_bar');
+function remove_admin_bar() {
+    add_filter('show_admin_bar', '__return_false');
+    add_filter('admin_head', '__return_false');
+}
+  add_action('init', 'remove_admin_bar');
 
 
 /**

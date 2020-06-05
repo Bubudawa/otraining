@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "01518dce2f666967855d";
+/******/ 	var hotCurrentHash = "6dd74ac4d8f93a711815";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -911,16 +911,6 @@
     seeFirstFilter.classList.add('active');
     app.log();
   },
-//   subscribephp: function(){
-//     $post_id = url_to_postid(get_permalink());
-//     $user = get_current_user_id();
-//     $pdo = new PDO('mysql:host=ec2-3-88-230-190.compute-1.amazonaws.com;dbname=Otraining', 'training', 'training1234');
-//     $stmt = $pdo->prepare('INSERT INTO wp_subscribers (user_id, formation_id) VALUES ('.$user.', '.$post_id.')');
-//     $stmt->execute();
-
-// return $stmt;
-
-// }
 
 };
 

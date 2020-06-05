@@ -69,9 +69,6 @@ function add_student() {
 // Il faut register les scripts que notre formualire utilise (présent dans login.php)
 
 
-
-
-
 add_action( 'wp_footer', 'show_student_registration_message' );
 function show_student_registration_message() {
 	if ( isset( $_GET['message'] ) ) {

@@ -2613,6 +2613,57 @@ header {
   .footer__teacher__button {
     text-align: center; }
 
+.mentions {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+  font-size: 16px; }
+  .mentions h1 {
+    color: #325A73;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .mentions h2 {
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold; }
+  .mentions p {
+    padding-bottom: 1rem; }
+
+.cgu {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+  font-size: 16px; }
+  .cgu h1 {
+    color: #325A73;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem; }
+  .cgu p {
+    padding-bottom: 1rem; }
+
+.aide {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+  font-size: 16px;
+  text-align: center; }
+  .aide h1 {
+    color: #325A73;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .aide p {
+    padding-bottom: 1rem; }
+
 /* 
   Login
 */

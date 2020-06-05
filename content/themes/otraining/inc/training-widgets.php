@@ -48,5 +48,3 @@ function hstngr_register_widget() {
     }
     
     }
-
-
