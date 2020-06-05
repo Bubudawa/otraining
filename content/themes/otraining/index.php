@@ -34,7 +34,7 @@ endif;
 
 ?>
 
-
+<?php get_sidebar('aside'); ?>
 
 </div>
         </div>
