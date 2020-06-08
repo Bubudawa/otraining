@@ -23,6 +23,8 @@ Template Name: Inscription
     }
     else {
         echo '<p>Vous êtes déjà connecté.</p>';
+        echo '<p>Vous devez vous déconnecter pour créer un compte Formateur.</p>';
+        echo '<p><a href="' . $logout . '">cliquez ici pour vous déconnecter.</a></p>';
     }
  ?>
 

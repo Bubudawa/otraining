@@ -1,14 +1,16 @@
 @charset 'UTF-8';
 
 
-@import 
+@import
     'abstracts/variables';
-    
+
+
 @import
     '~reset-css/sass/reset',
     '~font-awesome/scss/font-awesome';
 
-@import 
+
+@import
     'base/base',
     'base/typo';
 
@@ -24,8 +26,10 @@
     'layout/aide',
     'layout/login';
 
+
 @import
     'components/buttons',
     'components/menu-desktop',
     'components/burger',
     'components/icons';
+

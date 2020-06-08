@@ -49,7 +49,7 @@ function add_student() {
 	        // Envoie un mail de notification au nouvel utilisateur
 	        wp_new_user_notification( $user_id, $pass );
 	    } else {
-	    	wp_redirect( site_url( '/inscription?message=already-registered' ) );
+	    	wp_redirect( site_url( '/inscription/?message=already-registered' ) );
 			exit();
 	    }
 
@@ -66,15 +66,15 @@ function add_student() {
 	}
 }
 
-// Il faut register les scripts que notre formualire utilise (présent dans login.php)
+// Il faut register les scripts que notre formualire utilise (présent dans theme-enqueue.php)
 
 
-add_action( 'wp_footer', 'show_student_registration_message' );
 function show_student_registration_message() {
 	if ( isset( $_GET['message'] ) ) {
 		$wrapper = '<div class="message">%s</div>';
+
 		switch ( $_GET['message'] ) {
-			case 'already-registred':
+			case 'already-registered':
 				echo wp_sprintf( $wrapper, 'Un utilisateur possède la même adresse.' );
 				break;
 			case 'not-user':
@@ -96,3 +96,4 @@ function show_student_registration_message() {
 		}
 	}
 }
+add_action( 'wp_footer', 'show_student_registration_message' );

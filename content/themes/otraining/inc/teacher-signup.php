@@ -66,7 +66,7 @@ function add_teacher() {
 	}
 }
 
-// Il faut register les scripts que notre formualire utilise (présent dans login.php)
+// Il faut register les scripts que notre formualire utilise (présent dans theme-enqueue.php)
 
 
 
