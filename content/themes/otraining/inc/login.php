@@ -54,17 +54,3 @@ function pippin_login_fail( $username ) {
      }
 }
 add_action( 'wp_login_failed', 'pippin_login_fail' );  // hook failed login
-
-
-
-
-// Il faut register les scripts que notre formualire utilise
-add_action( 'wp_enqueue_scripts', 'register_login_script' );
-function register_login_script() {
-	wp_register_script( 'inscription-front', get_template_directory_uri() . '/public/js/inscription.js', array( 'jquery' ), '1.0', true );
-	wp_register_script( 'message', get_template_directory_uri() . '/public/js/message.js', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'jquery' );
-
-	// Ce script sera chargé sur toutes les pages du site, afin d'afficher les messages d'erreur
-	wp_enqueue_script( 'message' );
-}

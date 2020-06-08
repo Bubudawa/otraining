@@ -12,11 +12,9 @@
       <div class="footer__menu">
           <div class="footer__menu__catégories">
             <ul>
-              <li><a href="#"><i class="fa fa-music" aria-hidden="true"></i>Musique</a></li>
-              <li><a href="#"><i class="fa fa-cube" aria-hidden="true"></i>Design</a></li>
-              <li><a href="#"><i class="fa fa-child" aria-hidden="true"></i>développement personnel</a></li>
-              <li><a href="#"><i class="fa fa-laptop" aria-hidden="true"></i>Informatique</a></li>
-              <li><a href="#"><i class="fa fa-paint-brush" aria-hidden="true"></i>Art</a></li>
+
+            <?php get_sidebar('aside'); ?>
+
             </ul>
           </div>
           <div class="footer__menu__menu">
@@ -25,7 +23,7 @@
               <li><a href="<?php echo home_url(); ?>/catalogue"><i class="fa fa-suitcase" aria-hidden="true"></i>Formations</a></li>
               <li><a href="<?php echo home_url(); ?>/a-propos"><i class="fa fa-info-circle" aria-hidden="true"></i>A propos</a></li>
               <li><a href="<?php echo home_url(); ?>/contact"><i class="fa fa-envelope-o" aria-hidden="true"></i>Contact</a></li>
-              <li><a href="<?php echo home_url(); ?>/aide"><i class="fa fa-question-circle" aria-hidden="true"></i>Aide</a></li>
+              <li><a href="<?php echo home_url(); ?>/besoin-daide"><i class="fa fa-question-circle" aria-hidden="true"></i>Aide</a></li>
             </ul>
           </div>
           <div class="footer__menu__session">
@@ -43,11 +41,11 @@
             </p>
           </div>
 
-            <div class="footer__end__menu-ml">
-              <a href="<?php echo home_url(); ?>/mentions-legales">Mentions légales</a>
+          <div class="footer__end__menu-ml">
+              <a href="<?php echo home_url(); ?>/mentions">Mentions légales</a>
             </div>
             <div class="footer__end__menu-cgv">
-              <a href="<?php echo home_url(); ?>/cgv">CGV</a>
+              <a href="<?php echo home_url(); ?>/conditions-generales-dutilisation">CGU</a>
           </div>
 
           <div class="footer__end__social social-media">

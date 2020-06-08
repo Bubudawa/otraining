@@ -25,7 +25,7 @@ function hstngr_register_widget() {
     if ( ! empty( $title ) )
     echo $args['before_title'] . $title . $args['after_title'];
     //output
-    echo do_shortcode ('[ct_terms custom_taxonomy=category]');
+    echo do_shortcode ('[ct_terms custom_taxonomy=archcate]');
     // echo __( 'Hello, World from Hostinger.com', 'hstngr_widget_domain' );
     echo $args['after_widget'];
     }
@@ -48,5 +48,3 @@ function hstngr_register_widget() {
     }
     
     }
-
-

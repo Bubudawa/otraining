@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 
+<?php get_sidebar('aside'); ?>
+
 <?php
 
 
@@ -14,9 +16,9 @@ endwhile; endif;
 ?>
 
 <?php //start by fetching the terms for the animal_cat taxonomy
-$terms = get_terms( 'category', array(
-    // 'orderby'    => 'count',
-    // 'hide_empty' => 0
+$terms = get_terms( 'archcate', array(
+    'orderby'    => 'count',
+    'hide_empty' => 0
 ) );
 ?>
 
@@ -27,7 +29,8 @@ foreach( $terms as $term ) {
     // Define the query
     $args = array(
         'post_type' => 'formation',
-        'category' => $term->slug
+        'archcate' => $term->slug
+
     );
     $query = new WP_Query( $args );
      
