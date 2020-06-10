@@ -26,12 +26,20 @@ $user = get_current_user_id();
 function subscribephp(){
     $post_id = url_to_postid(get_permalink());
     $user = get_current_user_id();
-$pdo = new PDO('mysql:host=ec2-3-88-230-190.compute-1.amazonaws.com;dbname=Otraining', 'training', 'training1234');
-$stmt = $pdo->prepare('INSERT INTO wp_subscribers (user_id, formation_id) VALUES ('.$user.', '.$post_id.')');
-$stmt->execute();
+    $pdo = new PDO('mysql:host=ec2-3-88-230-190.compute-1.amazonaws.com;dbname=Otraining', 'training', 'training1234');
+    $reponse = $pdo->query('SELECT user_id, formation_id FROM wp_subscribers WHERE user_id = '.$user.' AND formation_id = '.$post_id);
+    $donnees_exist =$reponse->fetch();
+    if ($donnees_exist == false) {
+        $stmt = $pdo->prepare('INSERT INTO wp_subscribers (user_id, formation_id) VALUES ('.$user.', '.$post_id.')');
+        $stmt->execute();
 
-return $stmt;
 
+    }
+
+    // return $stmt;
+    else{
+        echo'Vous êtes déjà inscrit';
+    }
 }
 
 
@@ -45,5 +53,16 @@ $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_COLUMN, 2);
 
 return $result;
+}
+
+function allcontent(){
+    $post_id = url_to_postid(get_permalink());
+    $user = get_current_user_id();
+    $pdo = new PDO('mysql:host=ec2-3-88-230-190.compute-1.amazonaws.com;dbname=Otraining', 'training', 'training1234');
+    $reponse = $pdo->query('SELECT user_id, formation_id FROM wp_subscribers WHERE user_id = '.$user.' AND formation_id = '.$post_id);
+    $donnees_exist =$reponse->fetch();
+
+    return $donnees_exist;
+
 }
 

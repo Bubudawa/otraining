@@ -18,19 +18,19 @@ Template Name: Connexion
 
                 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-                if (strpos($url, 'login/?user=empty')!==false) {
+                if (strpos($url, 'connexion/?user=empty')!==false) {
                     echo "<div class='login_failed'>Entrez un identifiant :</div>";
                 }
 
-                if (strpos($url, 'login/?pwd=empty')!==false) {
+                if (strpos($url, 'connexion/?pwd=empty')!==false) {
                     echo "<div class='login_failed'>Entrez un mot de passe :</div>";
                 }
 
-                if (strpos($url, 'login/?login=empty')!==false) {
+                if (strpos($url, 'connexion/?login=empty')!==false) {
                     echo "<div class='login_failed'><p>Entrez un identifiant et</p><p>un mot de passe :</p></div>";
                 }
 
-                if (strpos($url,'login/?login=failed') !== false) {
+                if (strpos($url,'connexion/?login=failed') !== false) {
                     echo "<div class='login_failed'><p>Mot de passe ou identifiant incorrect :</p></div>";
                 }
 
@@ -46,7 +46,7 @@ Template Name: Connexion
 
         if (!is_user_logged_in()) {
             wp_login_form(
-                ['redirect' => site_url('wp-admin/')
+                ['redirect' => site_url('/wp-admin')
 
             ]
             );

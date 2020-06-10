@@ -24,7 +24,9 @@ $count = $wpquerySearch->found_posts; ?>
 <div class="search-count">
 <h2>Résultats de recherche :</h2>
 
-<p><?php 
+
+<h3><?php 
+
     if ($count == 1) {
         echo 'Il y a ' . $count. ' formation contenant : "' . $search . '".';
     }
@@ -34,7 +36,9 @@ $count = $wpquerySearch->found_posts; ?>
     else {
         echo 'Il n\'y aucune formation contenant : "' . $search . '".';
     }
-?></p>
+
+?></h3>
+
 
 <?php
 if ($wpquerySearch->have_posts()) : while

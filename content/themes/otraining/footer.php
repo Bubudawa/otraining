@@ -13,7 +13,7 @@
           <div class="footer__menu__catégories">
             <ul>
 
-            <?php get_sidebar('aside'); ?>
+            <?php dynamic_sidebar('aside'); ?>
 
             </ul>
           </div>
@@ -32,7 +32,7 @@
               <li><a href="<?php echo home_url(); ?>/connexion"><i class="fa fa-user-circle" aria-hidden="true"></i>Se connecter</a></li>
               <li><a href="<?php echo home_url(); ?>/devenir-formateur"><i class="fa fa-user-plus" aria-hidden="true"></i>Devenez Formateur</a></li>
             </ul>
-          </div>      
+          </div>     
       </div>
       <div class="footer__end">
           <div class="footer__end__copy">
@@ -42,7 +42,7 @@
           </div>
 
           <div class="footer__end__menu-ml">
-              <a href="<?php echo home_url(); ?>/mentions">Mentions légales</a>
+              <a href="<?php echo home_url(); ?>/mentions-legales">Mentions légales</a>
             </div>
             <div class="footer__end__menu-cgv">
               <a href="<?php echo home_url(); ?>/conditions-generales-dutilisation">CGU</a>

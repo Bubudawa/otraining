@@ -16,6 +16,8 @@ require('inc/student-signup.php');
 
 require('inc/teacher-signup.php');
 
+require('inc/search.php');
+
 //in order to have the models pages
 function login_model() {
     add_theme_support(
@@ -33,9 +35,14 @@ add_action('after_setup_theme', 'login_model');
 function otraining_widgets() {
     // Déclarer un emplacement de widget
     register_sidebar([
-        'id' => 'aside',
-        'name' => 'Widgets de la sidebar'
+        'id' => 'main',
+        'name' => 'Menu de Formation'
     ]);
+    register_sidebar([
+        'id' => 'aside',
+        'name' => 'Footer'
+    ]);
+
 }
 
 add_action('widgets_init', 'otraining_widgets');
@@ -68,3 +75,7 @@ function list_terms_custom_taxonomy( $atts ) {
     //Allow Text widgets to execute shortcodes
      
     add_filter('widget_text', 'do_shortcode');
+
+
+
+    //   

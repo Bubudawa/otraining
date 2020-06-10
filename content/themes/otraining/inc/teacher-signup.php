@@ -77,7 +77,7 @@ function show_teacher_registration_message() {
 	if ( isset( $_GET['message'] ) ) {
 		$wrapper = '<div class="message">%s</div>';
 		switch ( $_GET['message'] ) {
-			case 'already-registred':
+			case 'already-registered':
 				echo wp_sprintf( $wrapper, 'Un utilisateur possède la même adresse.' );
 				break;
 			case 'not-user':

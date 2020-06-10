@@ -7,9 +7,9 @@ function otraining_setup() {
     add_theme_support('post-thumbnails');
 
     register_nav_menus([
-        'main-menu' => 'Menu Formations',
-        'burger-menu' => 'Menu Mobile',
-        'login-menu' => 'Menu Connexion'
+        'main' => 'Menu Formations',
+        'burger' => 'Menu Mobile',
+        'login' => 'Menu de Connexion'
     ]);
 
 }

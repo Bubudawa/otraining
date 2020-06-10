@@ -61,7 +61,7 @@ function add_student() {
 		$user = wp_signon( $creds, false );
 
 		// Redirection
-		wp_redirect( site_url( '/wp-admin/?message=welcome' ) );
+		wp_redirect( site_url( 'wp/wp-admin/?message=welcome' ) );
 		exit();
 	}
 }

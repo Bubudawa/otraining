@@ -73,6 +73,13 @@
     display: none;
 }
 
+.search-container {
+    display: none;
+}
+
+.submit-button {
+    display: none; }
+
 
 
 @media (min-width: $breakpoint-medium)
@@ -212,7 +219,17 @@
     .categories__list {
         display: none;
     }
+    .search-container {
+        display: inherit;
+    }
+
+    .submit-button {
+        display: inline-block;
+    }
  }
+
+
+ 
 
 
 
