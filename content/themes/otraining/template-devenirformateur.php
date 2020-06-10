@@ -36,6 +36,12 @@ else {
 </div>
 
 
+<div class="login-text">
+    <p>Si vous souhaitez plutôt suivre une formation ? 
+        <a href="<?php echo home_url(); ?>/inscription">cliquez ici pour vous incrire</a>.
+    </p>
+</div>
+
 
 
 <?php get_footer(); ?>

@@ -75,21 +75,6 @@ class OFormation
 
             ]
         );
-
-        register_taxonomy(
-            'tag',
-            'formation',
-            [
-                'label' => 'Tags',
-                'public' => true,
-                'hierarchical' => true,
-                'show_admin_column' => true,
-                'rewrite' => [
-                    'slug' => 'tag'
-                ]
-
-            ]
-        );
     }
 
     public function oformation_activate()

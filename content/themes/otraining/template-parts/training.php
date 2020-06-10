@@ -1,27 +1,26 @@
-<div class="famous-training__single">
 
-    <div class="famous-training__single__image">
-    <?php the_post_thumbnail(); ?>
+
+<div class="card">
+  <div class="card__image-holder">
+    <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+  </div>
+  <div class="card-title">
+      <span class="left"></span>
+      <span class="right"></span>
+    </a>
+    <h2>
+    <?php the_title(); ?>
+        <small>avec <?php the_author_link(); ?></small>
+
+    </h2>
+  </div>
+  <div class="card-flap flap1">
+    <div class="card-description">
+        <?php the_excerpt();?>    </div>
+    <div class="card-flap flap2">
+      <div class="card-actions">
+        <a href="<?php the_permalink();?>" class="btn">Read more</a>
+      </div>
     </div>
-
-    <a href="<?php the_permalink();?>"><h2 class="famous-training__single__title"><?php the_title(); ?></h2></a>
-
-    <div class="famous-training__single__pricetime">
-
-        <div class="price">
-            <i class="fa fa-money fa-lg" aria-hidden="true"></i><?php the_field('prix'); ?>
-        </div>
-
-        <div class="time">
-            <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i><?php the_field('duree'); ?>
-        </div>
-
-    </div>
-
-    <div class="famous-training__single__author">
-        <a href="#"><i class="fa fa-user" aria-hidden="true"></i><?php the_author_link(); ?></a>
-    </div>
-
-    
-
+  </div>
 </div>

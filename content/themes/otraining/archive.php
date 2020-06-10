@@ -1,17 +1,12 @@
 <?php get_header(); ?>
 
-
-<?php get_sidebar('aside'); ?>
-
 <?php
-
 
 if (have_posts()) : while (have_posts()) : the_post();
 
     get_template_part('detail');
 
 endwhile; endif;
-
 
 ?>
 

@@ -1,6 +1,5 @@
 @charset 'UTF-8';
 
-
 @import 
     'abstracts/variables';
     
@@ -12,20 +11,20 @@
     'base/base',
     'base/typo';
 
-
 @import
     'layout/header',
     'layout/navbar',
     'layout/section',
     'layout/main',
     'layout/footer',
-    'layout/mentions',
-    'layout/cgu',
-    'layout/aide',
-    'layout/login';
+    'layout/page',
+    'layout/login',
+    'layout/search';
 
 @import
     'components/buttons',
     'components/menu-desktop',
     'components/burger',
+    'components/cards',
+    'components/training',
     'components/icons';

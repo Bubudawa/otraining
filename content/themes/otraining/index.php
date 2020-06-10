@@ -14,6 +14,7 @@ endwhile; endif;
         <div class="famous-training">
           <h2 class="famous-training__categories"><i class="fa fa-star" aria-hidden="true"></i>Formations les plus populaires</h2>
           <div class="wrapper">
+          <div class="cards">
 
           <?php
 
@@ -34,6 +35,7 @@ endif;
 
 ?>
 
+</div>
 
 
 </div>
