@@ -7,8 +7,24 @@ Template Name: Mes formations
 
 <?php the_title()?>
 
-<?php 
 
+<?php the_title()?>
+
+<?php
+
+    if (!is_user_logged_in()) {
+        echo '<p>Connectez-vous pour accéder à vos formations</p>';
+        echo '<p><a href="' . home_url() . '/connexion">Connexion</a></p>';
+        exit;
+    }
+
+?>
+
+
+
+
+
+<?php 
 
 $see = mytrainings();
 
