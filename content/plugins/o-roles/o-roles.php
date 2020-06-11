@@ -97,7 +97,10 @@ class ORoles {
                 unset($menu[key($menu)]);
             }
         }
+        
     }
+        
+    
 
 
     public function oroles_remove_role() {
