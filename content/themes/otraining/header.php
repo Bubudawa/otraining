@@ -99,6 +99,7 @@
           <div class="session">
 
             <?php if (is_user_logged_in()) : ?>
+
               <a href="<?php echo home_url(); ?>/wp/wp-admin" class="session__log-in">Mon espace</a>
               <a href="<?php echo home_url(); ?>/mes-formations" class="session__log-in">Mes formations</a>
               <a href="<?php echo wp_logout_url(get_permalink()); ?>" class="session__log-in" >Déconnexion</a>

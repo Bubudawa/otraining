@@ -44,17 +44,19 @@ Template Name: Connexion
 
             if (!is_user_logged_in()) {
                 wp_login_form(
-                    ['redirect' => home_url('/wp/wp-admin')
+                  ['redirect' => site_url('/wp-admin')
 
                 ]
                 );
             }
+
 
             else {
                 echo '<p>Vous êtes déjà connecté.</p>';
                 echo '<p><a href="' . home_url() . '/wp/wp-admin">Accédez à votre espace.</a></p>';
             }
             ?>
+
 
 
 
