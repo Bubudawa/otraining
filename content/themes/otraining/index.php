@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <?php
 
-if (have_posts()): while (have_posts()): the_post();
+// if (have_posts()): while (have_posts()): the_post();
     get_template_part('template-parts/home/banner');
-endwhile; endif;
+// endwhile; endif;
 
 
 ?>
@@ -65,28 +65,6 @@ endif;
         </ul>
       </div>
              
-              <!-- menu category for desktop -->
-              <div class="categories-dynamique__list">
-            
-              <?php
-
-        $args = [
-          'post_type' => 'categorie',
-          'meta_key' => 'category',
-          'meta_value' => true
-        ];
-
-          $wpquerySkills = new WP_Query($args);
-
-          if ($wpquerySkills->have_posts()) : while ($wpquerySkills->have_posts()) : $wpquerySkills->the_post();
-
-              get_template_part('template-parts/home/desktop/categories');
-
-          endwhile;
-          endif;
-
-      ?>
-              </div>
               <div class="content__first"></div>
               <div class="categories__button">
               <a href="<?php bloginfo('url'); ?>/catalogue/">

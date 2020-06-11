@@ -76,6 +76,11 @@ function list_terms_custom_taxonomy( $atts ) {
      
     add_filter('widget_text', 'do_shortcode');
 
-
-
-    //   
+    function categorie_remove_menu_items() {
+        if( !current_user_can( 'administrator' ) ):
+            remove_menu_page( 'edit.php?post_type=categorie' );
+        endif;
+    }
+    add_action( 'admin_menu', 'categorie_remove_menu_items' );
+   
+    

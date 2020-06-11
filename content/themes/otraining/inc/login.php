@@ -14,25 +14,26 @@ add_filter( 'login_form_bottom', 'lost_password_link' );
 
 function possibly_redirect(){
 
-    global $pagenow;
+  global $pagenow;
 
-    if( 'wp-login.php' == $pagenow ) {
+  if( 'wp-login.php' == $pagenow ) {
 
-      if ( isset( $_POST['wp-submit'] ) ||   // in case of LOGIN
-        ( isset($_GET['action']) && $_GET['action']=='logout') ||   // in case of LOGOUT
-        ( isset($_GET['checkemail']) && $_GET['checkemail']=='confirm') ||   // in case of LOST PASSWORD
-        ( isset($_GET['checkemail']) && $_GET['checkemail']=='registered')
-      )
+    if ( isset( $_POST['wp-submit'] ) ||   // in case of LOGIN
+      ( isset($_GET['action']) && $_GET['action']=='logout') ||   // in case of LOGOUT
+      ( isset($_GET['checkemail']) && $_GET['checkemail']=='confirm') ||   // in case of LOST PASSWORD
+      ( isset($_GET['checkemail']) && $_GET['checkemail']=='registered')
+    )
 
-      return;    // in case of REGISTER
+    return;    // in case of REGISTER
 
-      else wp_redirect(home_url()); // or wp_redirect(home_url('/login'));
+    else wp_redirect(home_url()); // or wp_redirect(home_url('/login'));
 
-      exit();
+    exit();
 
-    }
+
   }
-  add_action('init','possibly_redirect');
+}
+add_action('init','possibly_redirect');
 
 
 // message d'erreur si connexion vide

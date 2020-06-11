@@ -50,7 +50,8 @@ class OFormation
                 'title',
                 'editor',
                 'custom-fields',
-                'thumbnail'
+                'thumbnail',
+                'excerpt'
             ]
         ];
 
