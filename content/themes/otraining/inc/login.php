@@ -30,6 +30,7 @@ function possibly_redirect(){
 
     exit();
 
+
   }
 }
 add_action('init','possibly_redirect');

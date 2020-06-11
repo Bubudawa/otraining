@@ -40,7 +40,10 @@ Template Name: Connexion
             ?>
 
 
-<?php
+            <?php
+
+       
+
 
 if (!is_user_logged_in()) {
     wp_login_form(
@@ -51,12 +54,14 @@ if (!is_user_logged_in()) {
 }
 
 
-else {
-    echo '<p>Vous êtes déjà connecté.</p>';
-    echo '<p><a href="' . site_url() . '/wp/wp-admin">Accédez à votre espace.</a></p>';
-}
-?>
-    
+            else {
+                echo '<p>Vous êtes déjà connecté.</p>';
+                echo '<p><a href="' . home_url() . '/wp/wp-admin">Accédez à votre espace.</a></p>';
+            }
+            ?>
+
+
+
 
 
 
