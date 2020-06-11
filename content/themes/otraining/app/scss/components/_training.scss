@@ -3,3 +3,36 @@
     flex-direction: column;
     align-items: center;
 }
+.famous-training__single{
+    background-color: white;
+}
+
+.single_training{
+    margin: 3em;
+    background-color: white;
+    display: flex;
+
+    &-content{
+        margin: 3em;
+        flex-direction: column;
+        h2{
+            margin-top: 0.7em;
+            margin-bottom: 0.7em;
+            font-weight: bold;
+        }
+
+    }
+    &_image{
+        margin: 0.5em;
+        height: 18.75em;
+    }
+    &_title{
+
+        font-size: 1.5em;
+    }
+    &_content{
+        width:80%;
+        line-height: 1.5em;
+        font-size: 1.2em;
+    }
+}

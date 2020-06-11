@@ -1,40 +1,9 @@
-<?php
+<?php get_header();?>
 
-get_header();
-?>
-<div class="famous-training__single">
+<?php if (have_posts()): while (have_posts()): the_post(); ?>
 
-<div class="famous-training__single__image">
-<?php the_post_thumbnail(); ?>
-</div>
+    <?php get_template_part('template-parts/training-detail'); ?>
 
-<a href="<?php the_permalink();?>"><h2 class="famous-training__single__title"><?php the_title(); ?></h2></a>
-
-<div class="famous-training__single__pricetime">
-
-    <div class="price">
-        <i class="fa fa-money fa-lg" aria-hidden="true"></i><?php the_field('prix'); ?>
-    </div>
-
-    <div class="time">
-        <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i><?php the_field('duree'); ?>
-    </div>
-
-</div>
-
-<div class="famous-training__single__author">
-    <a href="#"><i class="fa fa-user" aria-hidden="true"></i><?php the_author_link(); ?></a>
-</div>
-
-</div>
-
-<form onsubmit="subscribephp();" method="POST">
-<button type="submit" onsubmit="subscribephp();">Click me</button>
-
-  <input class="" type="submit" onsubmit="subscribephp();" value="S'inscrire à la formation">
-
-</form>
-
-<?php the_excerpt(); ?>
+<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

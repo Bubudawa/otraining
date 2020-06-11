@@ -62,30 +62,15 @@ class OFormation
 
     public function register_taxonomies() {
         register_taxonomy(
-            'category',
+            'archcate',
             'formation',
             [
-                'label' => 'Catégories',
+                'label' => 'Catégories des formations',
                 'public' => true,
                 'hierarchical' => true,
                 'show_admin_column' => true,
                 'rewrite' => [
-                    'slug' => 'category'
-                ]
-
-            ]
-        );
-
-        register_taxonomy(
-            'tag',
-            'formation',
-            [
-                'label' => 'Tags',
-                'public' => true,
-                'hierarchical' => true,
-                'show_admin_column' => true,
-                'rewrite' => [
-                    'slug' => 'tag'
+                    'slug' => 'archcate'
                 ]
 
             ]
