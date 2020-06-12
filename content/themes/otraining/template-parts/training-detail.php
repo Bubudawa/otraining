@@ -14,8 +14,10 @@
 
 
 <?php if (!is_user_logged_in()){
-    echo 'il faut se connecter';
     the_excerpt();
+    echo '<p class="p-connexion">Afin de souscrire veuillez vous connecter:</p>';
+    echo '<br><a href="' . home_url() . '/connexion" class="btn-connexion">se connecter</a>';
+    
 }
     
 

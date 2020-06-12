@@ -49,7 +49,7 @@
                     <ul class="inline">
                       <li><a href="<?php echo home_url(); ?>/a-propos">A propos</a></li>
                       <li><a href="<?php echo home_url(); ?>/contact">Contact</a></li>
-                      <li><a href="<?php echo home_url(); ?>/aide">Aide</a></li>
+                      <li><a href="<?php echo home_url(); ?>/besoin-daide">Aide</a></li>
 
                     </ul>
 

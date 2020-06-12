@@ -2552,7 +2552,7 @@ header {
   .session {
     display: inherit; }
   .footer-wrapper {
-    margin-top: 15em;
+    margin-top: 5em;
     padding: 1.5rem 0;
     display: inherit !important;
     background-color: #325A73; }
@@ -2996,6 +2996,18 @@ a.btn {
   text-decoration: none;
   transition: all 0.1s 0s ease-out; }
 
+.p-connexion {
+  margin-top: 1em;
+  font-size: 1.2em; }
+
+.btn-connexion {
+  background: #0096a0;
+  border-radius: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem; }
+
 .no-touch {
   background: #00a2ad;
   box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
@@ -3005,13 +3017,21 @@ a.btn {
 div.cards {
   margin: 80px auto;
   max-width: 960px;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap; }
+
+.test {
+  margin: 0;
+  width: 300px;
+  margin: 8px; }
 
 div.card {
   background: #ffffff;
   display: inline-block;
   margin: 8px;
   max-width: 300px;
+  min-height: 300px;
   perspective: 1000;
   position: relative;
   text-align: left;
@@ -3054,8 +3074,10 @@ div.card {
       div.card div.card-title a.toggle-info span.right {
         left: 14px;
         transform: rotate(-45deg); }
+    div.card div.card-title p {
+      font-size: 18px; }
     div.card div.card-title h2 {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 700;
       letter-spacing: -0.05em;
       margin: 0;
@@ -3071,7 +3093,7 @@ div.card {
     font-size: 14px; }
   div.card div.card-actions {
     box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
-    padding: 10px 15px 20px;
+    padding: 15px;
     text-align: center; }
   div.card div.card-flap {
     background: #d9d9d9;
@@ -3084,10 +3106,14 @@ div.card {
     z-index: -1; }
   div.card div.flap2 {
     transition: all 0.3s 0s ease-out;
-    z-index: -2; }
+    z-index: -2;
+    transform: rotateX(-45deg); }
   div.card:hover {
     box-shadow: 2px 2px 20px 10px rgba(17, 10, 56, 0.26);
     background-color: #cccccc; }
+
+.card-actions {
+  margin-left: 20px; }
 
 div.cards.showing div.card {
   cursor: pointer;

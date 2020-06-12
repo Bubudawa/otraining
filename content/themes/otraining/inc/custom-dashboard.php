@@ -71,27 +71,6 @@ add_action( 'admin_head', 'remove_contextual_help' );
       add_action('wp_dashboard_setup', 'profil_add_dashboard_widgets' );
   
 
-
-
-
-  // User can just see him training
-  if ( is_admin()) {
-    function seomix_adm_user_show_myposts($query) {
-      global $user_level;
-      if ($user_level < 5){
-        global $user_ID;
-        $query->set('author',$user_ID);
-        unset($user_ID);
-        $screen = get_current_screen();
-        add_filter('views_'.$screen->id, 'seomix_adm_user_remove_post_counts');}
-      return $query;}
-    
-    function seomix_adm_user_remove_post_counts($views) {
-      $views = array_intersect_key($views, array_flip(array('mine','trash')));
-      return $views;}
-    add_filter('pre_get_posts', 'seomix_adm_user_show_myposts');
-    }
-
 //Remove WordPress Footer Credits
 function wpo_remove_footer_admin() {
 	return '';
@@ -121,3 +100,30 @@ function disable_default_dashboard_widgets() {
   
   }
     add_action('admin_menu', 'disable_default_dashboard_widgets');
+
+
+
+    //Empeche les Formateurs de voir les formations des autres sans que cela les empeche de voir les Customs Fields.
+  function posts_for_current_author($query) {
+    global $pagenow;
+ 
+    if( 'edit.php' != $pagenow || !$query->is_admin )
+        return $query;
+ 
+    if( !current_user_can( 'edit_others_posts' ) ) {
+        global $user_ID;
+        $query->set('author', $user_ID );
+        $screen = get_current_screen();
+        add_filter('views_'.$screen->id, 'seomix_adm_user_remove_post_counts');
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'posts_for_current_author');
+
+function seomix_adm_user_remove_post_counts($views) {
+  
+  $views = array_intersect_key($views, array_flip(array('mine','trash')));
+  return $views;
+}
+
+

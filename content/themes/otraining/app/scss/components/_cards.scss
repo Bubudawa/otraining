@@ -10,7 +10,18 @@ a.btn {
   text-decoration: none;
 	transition: all 0.1s 0s ease-out;
 }
-
+.p-connexion{
+  margin-top:1em;
+  font-size: 1.2em;
+}
+.btn-connexion {
+  background: $teal;
+  border-radius: 4px;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem;
+}
 .no-touch{
   background: lighten($teal,2.5);
   box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
@@ -23,6 +34,15 @@ div.cards {
   margin: 80px auto;
   max-width: 960px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.test{
+  margin:0;
+  width: 300px;
+  margin: 8px;
+
+
 }
 
 div.card {
@@ -30,6 +50,7 @@ div.card {
   display: inline-block;
   margin: 8px;
   max-width: 300px;
+  min-height: 300px;
   perspective: 1000;
   position: relative;
   text-align: left;
@@ -87,9 +108,11 @@ div.card {
         transform: rotate(-45deg);
       }
     }
-    
+    p{
+      font-size: 18px;
+    }
     h2 {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 700;
       letter-spacing: -0.05em;
       margin: 0;
@@ -113,9 +136,10 @@ div.card {
 
   div.card-actions {
   	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.075);
-    padding: 10px 15px 20px;
+    padding: 15px;
     text-align: center;
   }
+
   
   div.card-flap {
     background: darken($white,15);
@@ -133,13 +157,18 @@ div.card {
   div.flap2 {
     transition: all 0.3s 0s ease-out;
     z-index: -2;
+    transform: rotateX(-45deg);
+
   }
   
   &:hover{
     box-shadow: 2px 2px 20px 10px rgba(17, 10, 56, 0.26);  
     background-color: darken($white, 20%);}
 }
+.card-actions{
+  margin-left: 20px;
 
+}
 div.cards.showing {
   div.card {
     cursor: pointer;

@@ -39,6 +39,7 @@ $count = $wpquerySearch->found_posts; ?>
 
 ?></h3>
 
+<div class="cards">
 
 <?php
 if ($wpquerySearch->have_posts()) : while
@@ -50,6 +51,7 @@ if ($wpquerySearch->have_posts()) : while
 endif;
 
 ?>
+</div>
 
 
 
