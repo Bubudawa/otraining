@@ -2521,6 +2521,12 @@ header {
 .submit-button {
   display: none; }
 
+.selector__categorie {
+  color: #325A73;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  text-transform: uppercase; }
+
 @media (min-width: 500px) {
   .wrapper {
     display: flex;
@@ -2546,6 +2552,7 @@ header {
   .session {
     display: inherit; }
   .footer-wrapper {
+    margin-top: 15em;
     padding: 1.5rem 0;
     display: inherit !important;
     background-color: #325A73; }
@@ -2733,6 +2740,9 @@ header {
   border: none;
   font-size: 0.7rem; }
 
+.search-submit:hover {
+  cursor: pointer; }
+
 .search-count h2 {
   text-align: center;
   font-size: 2rem;
@@ -2756,12 +2766,44 @@ header {
   border: none;
   font-size: 1rem; }
 
+.selector__button {
+  font-weight: bold;
+  padding: 0.5rem;
+  text-decoration: none;
+  margin: 1em;
+  color: #D5E5F2;
+  background-color: #325A73;
+  border-radius: 7px;
+  border: none;
+  font-size: 1rem; }
+
+.selector__selector {
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  color: #325A73;
+  margin-left: 1rem;
+  background-color: white;
+  border-radius: 7px;
+  border: none;
+  font-size: 1rem; }
+
+.selector__selector:hover {
+  cursor: pointer; }
+
+.selector__button:hover {
+  cursor: pointer; }
+
+.button:hover {
+  cursor: pointer; }
+
 #menu li {
   float: left;
   position: relative; }
 
 #menu li:hover {
-  z-index: 2;
+  z-index: 20;
   border-radius: 5px; }
 
 .menu-title {
@@ -2852,6 +2894,9 @@ header {
   border-radius: 7px;
   border: none;
   font-size: 1rem; }
+
+.col_button:hover {
+  cursor: pointer; }
 
 body {
   margin: 0;
@@ -3100,6 +3145,9 @@ div.card.show {
     width: 80%;
     line-height: 1.5em;
     font-size: 1.2em; }
+
+span {
+  color: #325A73; }
 
 .fa {
   height: 2rem;

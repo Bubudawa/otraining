@@ -12,7 +12,7 @@
       <!-- catégory : Formation les plus populaires -->
       <section class="slider">
         <div class="famous-training">
-          <h2 class="famous-training__categories"><i class="fa fa-star" aria-hidden="true"></i>Formations les plus populaires</h2>
+          <h2 class="famous-training__categories"><i class="fa fa-star" aria-hidden="true"></i>Les dernières formations</h2>
           <div class="wrapper">
           <div class="cards">
 

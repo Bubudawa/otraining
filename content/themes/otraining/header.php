@@ -50,10 +50,7 @@
                       <li><a href="<?php echo home_url(); ?>/a-propos">A propos</a></li>
                       <li><a href="<?php echo home_url(); ?>/contact">Contact</a></li>
                       <li><a href="<?php echo home_url(); ?>/aide">Aide</a></li>
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+
                     </ul>
 
                   </div>

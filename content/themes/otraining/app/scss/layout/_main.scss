@@ -81,6 +81,15 @@
     display: none; }
 
 
+.selector__categorie {
+    color: $color2;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+
+}
+
+
 
 @media (min-width: $breakpoint-medium)
  {
@@ -126,6 +135,7 @@
     }
 
     .footer-wrapper {
+        margin-top: 15em;
         padding: 1.5rem 0;
         // border: chocolate solid 2px;
         display: inherit !important;

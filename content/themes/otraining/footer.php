@@ -48,12 +48,7 @@
               <a href="<?php echo home_url(); ?>/conditions-generales-dutilisation">CGU</a>
           </div>
 
-          <div class="footer__end__social social-media">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-          </div>
+
       </div>
 
       </section>

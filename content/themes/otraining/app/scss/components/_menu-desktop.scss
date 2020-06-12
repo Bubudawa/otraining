@@ -4,7 +4,7 @@
 }
  
 #menu li:hover {
-    z-index:2;
+    z-index:20;
     border-radius: 5px;
 }
  
@@ -112,4 +112,9 @@
     font-size: 1rem;
 
 }
+
+.col_button:hover{
+    cursor: pointer;
+}
+
 

@@ -31,7 +31,7 @@ function deefuse_remove_admin_bar_links() {
 //remove Posts and Comments from Dashboard
 function custom_admin_menu() {
 	global $menu;
-	// unset($menu[5]);			// Articles
+	unset($menu[5]);			// Articles
 	unset($menu[25]);			// Commentaires
 }
 add_action('admin_menu', 'custom_admin_menu', 11);

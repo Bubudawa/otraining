@@ -8,6 +8,44 @@
     border-radius: 7px;
     border: none;
     font-size: 1rem;
+    
+}
+
+.selector__button {
+    font-weight: bold;
+    padding: 0.5rem;
+    text-decoration: none;
+    margin: 1em;
+    color: $color5;
+    background-color: $color2;
+    border-radius: 7px;
+    border: none;
+    font-size: 1rem;
+}
+
+.selector__selector {
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    color: $color2;
+    margin-left: 1rem;
+    background-color: white;
+    border-radius: 7px;
+    border: none;
+    font-size: 1rem;
+}
+
+.selector__selector:hover {
+    cursor: pointer;
+}
+
+.selector__button:hover {
+    cursor: pointer;
+}
+
+.button:hover{
+    cursor: pointer;
 }
 
 // .button-log {

@@ -4,10 +4,10 @@ Template Name: Catalogue
 */
 ?>
 <?php get_header(); ?>
-<label for="categories">
+<label class="selector__categorie"for="categories">
     Choisissez une catégorie:</label>
 <form method="POST">
-<select style="width:12%;"name="categories" id="list">
+<select class="selector__selector" style="width:12%;"name="categories" id="list">
 <option></option>
 
 
@@ -25,7 +25,7 @@ if ($wpqueryTraining->have_posts()): while ($wpqueryTraining->have_posts()): $wp
 endif;
 ?>
 </select>
-<input type="submit" name="submit" value="Appliquer"/>
+<input class="selector__button" type="submit" name="submit" value="Appliquer"/>
 </form>
 <?php 
 $getcat= '';

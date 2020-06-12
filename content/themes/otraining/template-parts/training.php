@@ -10,7 +10,7 @@
     </a>
     <h2>
     <?php the_title(); ?>
-        <small>avec <?php the_author_link(); ?></small>
+        <small>avec<span> <?php the_author(); ?></span></small>
 
     </h2>
   </div>
