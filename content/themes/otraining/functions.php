@@ -36,12 +36,21 @@ function otraining_widgets() {
     // Déclarer un emplacement de widget
     register_sidebar([
         'id' => 'main',
-        'name' => 'Menu de Formation'
+        'name' => 'Menu du haut (Formations)'
     ]);
     register_sidebar([
-        'id' => 'aside',
-        'name' => 'Footer'
+        'id' => 'footer1',
+        'name' => 'Footer de gauche'
     ]);
+    register_sidebar([
+        'id' => 'footer2',
+        'name' => 'Footer du millieu'
+    ]);
+    register_sidebar([
+        'id' => 'footer3',
+        'name' => 'Footer de droite'
+    ]);
+
 
 }
 
@@ -52,23 +61,37 @@ add_action('widgets_init', 'otraining_widgets');
 function list_terms_custom_taxonomy( $atts ) {
  
     // Inside the function we extract custom taxonomy parameter of our shortcode
-     
-        extract( shortcode_atts( array(
-            'custom_taxonomy' => '',
-        ), $atts ) );
-     
-    // arguments for function wp_list_categories
-    $args = array( 
-    'taxonomy' => $custom_taxonomy,
-    'title_li' => ''
-    );
-     
-    // We wrap it in unordered list 
-    echo '<ul>'; 
-    echo wp_list_categories($args);
-    echo '</ul>';
+    extract( shortcode_atts( array(
+        'custom_taxonomy' => '',
+    ), $atts ) );
+
+
+// https://developer.wordpress.org/reference/functions/get_term/
+// https://www.advancedcustomfields.com/resources/adding-fields-taxonomy-term/
+// https://www.advancedcustomfields.com/resources/adding-fields-menu-items/
+// https://www.advancedcustomfields.com/resources/the_field/
+
+
+// "archcate est le nom de la custom taxo" pour la boucle foreach
+$terms = get_terms('archcate');
+
+// pour retrouver le custom field lié au term d'une taxonomie il faut : 'NomDeLaTaxo_IdDuTerm' (ex: 'archcate_18')
+$taxonomy = 'archcate_'; 
+
+
+    foreach ( $terms as $term ) { 
+        $post_id = $taxonomy . $term->term_id;
+        $icon = get_field('archcate_icon', $post_id);
+
+?>
+        <li class="list-term-archcate">
+        
+        <a href="<?php echo home_url(); ?>/archcate/<?php echo $term->name;?>"><?php echo $icon;?><?php echo $term->name;?></a>
+        </li>
+<?php
     }
-     
+
+}
     // Add a shortcode that executes our function
     add_shortcode( 'ct_terms', 'list_terms_custom_taxonomy' );
      
@@ -82,5 +105,3 @@ function list_terms_custom_taxonomy( $atts ) {
         endif;
     }
     add_action( 'admin_menu', 'categorie_remove_menu_items' );
-   
-    

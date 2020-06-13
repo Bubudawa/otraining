@@ -18,17 +18,20 @@ function hstngr_register_widget() {
     array( 'description' => __( 'Catégories des Formations', 'hstngr_widget_domain' ), )
     );
     }
+
     public function widget( $args, $instance ) {
     $title = apply_filters( 'widget_title', $instance['title'] );
     echo $args['before_widget'];
+
     //if title is present
     if ( ! empty( $title ) )
     echo $args['before_title'] . $title . $args['after_title'];
     //output
     echo do_shortcode ('[ct_terms custom_taxonomy=archcate]');
-    // echo __( 'Hello, World from Hostinger.com', 'hstngr_widget_domain' );
+
     echo $args['after_widget'];
     }
+
     public function form( $instance ) {
     if ( isset( $instance[ 'title' ] ) )
     $title = $instance[ 'title' ];

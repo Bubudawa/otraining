@@ -2632,6 +2632,11 @@ header {
   .footer__teacher__button {
     text-align: center; }
 
+.widgettitle {
+  padding: 1rem;
+  text-align: center;
+  color: #40392C; }
+
 .page {
   width: 80vw;
   margin-left: auto;
