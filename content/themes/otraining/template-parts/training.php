@@ -26,6 +26,6 @@
     </div>
   </div>
   <div class="card-actions">
-      <a href="<?php the_permalink();?>" class="btn">Voir plus</a>
+      <a href="<?php the_permalink();?>" class="btn" alt="<?php echo the_title() ?>">Détail de la formation</a>
   </div>
 </div>

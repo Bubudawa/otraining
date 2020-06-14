@@ -3,7 +3,14 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background-color: $color5;
+    border-bottom: $white 0.1rem solid;
+
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#335c76+0,335c76+1,325a73+100&0.83+30,0.83+30,0.5+99,0.5+99,0+100 */
+background: -moz-linear-gradient(top,  rgba(51,92,118,0.83) 0%, rgba(51,92,118,0.83) 1%, rgba(51,91,117,0.83) 30%, rgba(50,90,115,0.5) 99%, rgba(50,90,115,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(51,92,118,0.83) 0%,rgba(51,92,118,0.83) 1%,rgba(51,91,117,0.83) 30%,rgba(50,90,115,0.5) 99%,rgba(50,90,115,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(51,92,118,0.83) 0%,rgba(51,92,118,0.83) 1%,rgba(51,91,117,0.83) 30%,rgba(50,90,115,0.5) 99%,rgba(50,90,115,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4335c76', endColorstr='#00325a73',GradientType=0 ); /* IE6-9 */
+
 
     
         &__logo {

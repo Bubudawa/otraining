@@ -5,6 +5,7 @@ Template Name: Catalogue
 ?>
 <?php get_header(); ?>
 
+<h1>Catalogue des Formations</h1>
 <label class="selector__categorie"for="categories">Choisissez une catégorie:</label>
 <form method="POST">
 <select class="selector__selector" style="width:16rem;"name="categories" id="list">

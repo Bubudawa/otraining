@@ -4,12 +4,12 @@
     align-items: center;
 }
 .famous-training__single{
-    background-color: white;
+    background-color: $white;
 }
 
 .single_training{
     margin: 3em;
-    background-color: white;
+    background-color: $white;
     display: flex;
 
     &-content{

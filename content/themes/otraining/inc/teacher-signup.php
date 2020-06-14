@@ -18,6 +18,7 @@ function register_teacher_form() {
 	//Validation
 	echo '<input type="submit" class="button" value="Créer mon compte">';
 	echo '</form>';
+	echo '<p class="login_link">Vous avez déjà un compte ? <a href="' . home_url() . '/connexion">Se connecter</a></p>';
 
 	// Enqueue de scripts qui vont nous permettre de vérifier les champs
 	wp_enqueue_script( 'inscription-front' );

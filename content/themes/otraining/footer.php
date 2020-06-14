@@ -23,9 +23,9 @@
             <?php dynamic_sidebar('footer2'); ?>
 
               <li><a href="<?php echo home_url(); ?>"><i class="fa fa-home" aria-hidden="true"></i>Accueil</a></li>
-              <li><a href="<?php echo home_url(); ?>/catalogue"><i class="fa fa-suitcase" aria-hidden="true"></i>Formations</a></li>
+              <li><a href="<?php echo home_url(); ?>/catalogue"><i class="fa fa-suitcase" aria-hidden="true"></i>Catalogue</a></li>
               <li><a href="<?php echo home_url(); ?>/a-propos"><i class="fa fa-info-circle" aria-hidden="true"></i>A propos</a></li>
-              <li><a href="<?php echo home_url(); ?>/contact"><i class="fa fa-envelope-o" aria-hidden="true"></i>Contact</a></li>
+              <li><a href="<?php echo home_url(); ?>/contact"><i class="fa fa-envelope" aria-hidden="true"></i>Contact</a></li>
               <li><a href="<?php echo home_url(); ?>/besoin-daide"><i class="fa fa-question-circle" aria-hidden="true"></i>Aide</a></li>
             </ul>
           </div>

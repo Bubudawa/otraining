@@ -171,17 +171,18 @@
     }
 
     .footer__end {
+        margin-top: 1rem;
         padding: 1.5rem 0 0 0;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
 
 
         &__copy {
             color: $color1;
         }
-        &__social {
-            color: $white;
+        p, a {
+            padding: 0 1rem 0 1rem;
         }
 
     }

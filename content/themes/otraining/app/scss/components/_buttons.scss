@@ -4,7 +4,7 @@
     text-decoration: none;
     margin: 1em;
     color: $color5;
-    background-color: $color2;
+    background-color: $teal;
     border-radius: 7px;
     border: none;
     font-size: 1rem;
@@ -30,7 +30,7 @@
     padding-bottom: 0.3rem;
     color: $color2;
     margin-left: 1rem;
-    background-color: white;
+    background-color: $white;
     border-radius: 7px;
     border: none;
     font-size: 1rem;
@@ -46,6 +46,7 @@
 
 .button:hover{
     cursor: pointer;
+    background-color: $color3;
 }
 
 // .button-log {

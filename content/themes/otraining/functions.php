@@ -105,3 +105,5 @@ $taxonomy = 'archcate_';
         endif;
     }
     add_action( 'admin_menu', 'categorie_remove_menu_items' );
+
+
