@@ -7,8 +7,10 @@ Template Name: Connexion
 <?php get_header(); ?>
 
 <div class="login-text">
-    <h2>Connexion</h2>
-    <p>Si vous n'avez pas encore de compte : <a href="<?php echo home_url(); ?>/inscription">cliquez ici pour vous inscrire</a>.</p>
+    <h1>Connectez-vous pour accéder aux formations</h1>
+    <p>Pas encore de compte ?</p>
+    <p>Alors <a href="<?php echo home_url(); ?>/inscription">cliquez ici pour <em>suivre une formation</em></a>.</p>
+    <p>Ou <a href="<?php echo home_url(); ?>/devenir-formateur">cliquez ici pour <em>devenir formateur</em></a>.</p>
 </div>
 <div class="login__container">
     <div class="login__connexion">
@@ -44,7 +46,7 @@ Template Name: Connexion
 
             if (!is_user_logged_in()) {
                 wp_login_form(
-                ['redirect' => site_url('/wp-admin')
+                ['redirect' => home_url()
 
                 ]
                 );
@@ -53,8 +55,15 @@ Template Name: Connexion
 
             else {
                 echo '<p>Vous êtes déjà connecté.</p>';
-                echo '<p><a href="' . home_url() . '/wp/wp-admin">Accédez à votre espace.</a></p>';
+                echo '<p class="login_link"><a href="' . home_url() . '/wp/wp-admin">Accédez à votre espace.</a></p>';
             }
+
+            function remove_lostpassword_text ( $text ) {
+                if ($text == 'Lost your password?'){$text = '';}
+                       return $text;
+                }
+        add_filter( 'gettext', 'remove_lostpassword_text' );
+
             ?> 
 
 

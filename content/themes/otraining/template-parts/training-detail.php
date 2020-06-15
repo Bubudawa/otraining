@@ -2,7 +2,7 @@
 
 
 <div class="single_training">
-        <img class="single_training_image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+        <?php the_post_thumbnail() ?>
         <div class="single_training-content">
 
         <div class="single_training_title">
@@ -15,8 +15,8 @@
 
 <?php if (!is_user_logged_in()){
     the_excerpt();
-    echo '<p class="p-connexion">Afin de souscrire veuillez vous connecter:</p>';
-    echo '<br><a href="' . home_url() . '/connexion" class="btn-connexion">se connecter</a>';
+    // echo '<p class="p-connexion">Afin de souscrire veuillez vous connecter:</p>';
+    echo '<br><a target="_blank" href="' . home_url() . '/connexion" class="btn">Accéder à la formation</a>';
     
 }
     

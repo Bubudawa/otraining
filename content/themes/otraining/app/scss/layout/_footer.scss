@@ -10,6 +10,19 @@
 
 .footer-wrapper {
     display: none;
+
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#325a73+0,335c76+99,335c76+100&0+0,0.5+0,0.83+70,0.83+70 */
+background: -moz-linear-gradient(top,  rgba(50,90,115,0.5) 0%, rgba(51,91,117,0.83) 70%, rgba(51,92,118,0.83) 99%, rgba(51,92,118,0.83) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(50,90,115,0.5) 0%,rgba(51,91,117,0.83) 70%,rgba(51,92,118,0.83) 99%,rgba(51,92,118,0.83) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(50,90,115,0.5) 0%,rgba(51,91,117,0.83) 70%,rgba(51,92,118,0.83) 99%,rgba(51,92,118,0.83) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80325a73', endColorstr='#d4335c76',GradientType=0 ); /* IE6-9 */
+
+
+
+
+
+
+    border-top: $white 0.1rem solid;
 }
 
 
@@ -36,4 +49,16 @@
     
         }
     }
+}
+
+.widgettitle {
+    padding: 1rem;
+    text-align: center;
+    color: $color1;
+
+  }
+
+
+.widget h2 {
+    font-size: 1.6rem !important;
 }

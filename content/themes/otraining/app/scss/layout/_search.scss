@@ -5,7 +5,7 @@
   text-decoration: none;
   margin: 0 0.1rem;
   color: white;
-  background-color: #325A73;
+  background-color: $teal;
   border-radius: 2px;
   border: none;
   font-size: 0.7rem;
@@ -13,6 +13,7 @@
 
 .search-submit:hover{
   cursor: pointer;
+  background-color: $color3;
 }
 
 .search-count h2 {

@@ -9,7 +9,7 @@ function register_student_form() {
 	// Les champs requis
 	echo '<p><label for="nom-user">Identifiant</label><input type="text" name="username" id="nom-user" required></p>';
 	echo '<p><label for="email-user">Email</label><input type="email" name="email" id="email-user" required></p>';
-	echo '<p><label for="pass-user">Mot de passe</label><input type="password" name="pass" id="pass-user" required><br>';
+	echo '<p><label for="pass-user">Mot de passe</label><input type="password" name="pass" id="pass-user" required>';
 	// echo '<input type="checkbox" id="show-password"><label for="show-password">Voir le mot de passe</label></p>';
 
 	// Nonce (pour vérifier plus tard que l'action a bien été initié par l'utilisateur)
@@ -18,6 +18,7 @@ function register_student_form() {
 	//Validation
 	echo '<input type="submit" class="button" value="Créer mon compte">';
 	echo '</form>';
+	echo '<p class="login_link">Vous avez déjà un compte ? <a href="' . home_url() . '/connexion">Se connecter</a></p>';
 
 	// Enqueue de scripts qui vont nous permettre de vérifier les champs
 	wp_enqueue_script( 'inscription-front' );
@@ -61,7 +62,7 @@ function add_student() {
 		$user = wp_signon( $creds, false );
 
 		// Redirection
-		wp_redirect( site_url( 'wp/wp-admin/?message=welcome' ) );
+		wp_redirect( home_url('?message=welcome') );
 		exit();
 	}
 }
@@ -90,7 +91,7 @@ function show_student_registration_message() {
 				echo wp_sprintf( $wrapper, 'Votre profil \'a pas été mis à jour. L\'adresse email est déjà utilisée.' );
 				break;
 			case 'welcome':
-				echo wp_sprintf( $wrapper, 'Votre compte a été créé. Vous allez recevoir un email de confirmation.' );
+				echo wp_sprintf( $wrapper, 'Votre compte a bien été créé. Vous êtes connecté.' );
 				break;
 			default :
 		}

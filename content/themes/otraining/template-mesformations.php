@@ -5,16 +5,14 @@ Template Name: Mes formations
 
 <?php get_header(); ?>
 
-<?php the_title()?>
-
-
-<?php the_title()?>
+<h1>Mes Formations</h1>
+<h2>Vous trouverez ici toutes les formations auxquels vous avez accès.</h2>
 
 <?php
 
     if (!is_user_logged_in()) {
         echo '<p>Connectez-vous pour accéder à vos formations</p>';
-        echo '<p><a href="' . home_url() . '/connexion">Connexion</a></p>';
+        echo '<p><a class="btn" href="' . home_url() . '/connexion">Connexion</a></p>';
         exit;
     }
 
@@ -36,7 +34,8 @@ foreach($see as $key =>$value){
     $the_content = get_the_excerpt($post_id); // On récupère le contenu du post
 
    echo '<div class="single_training">
-   <img class="single_training_image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+   <div class="single_training_image">'.$the_thumb.' 
+   </div>
    <div class="single_training-content">
 
    <div class="single_training_title">
@@ -48,7 +47,7 @@ foreach($see as $key =>$value){
    <div class="single_training_content">
    '. $the_content .'
    </div>
-   <a href="' .  get_post_permalink($post_id) . '" class="btn">Read more</a>
+   <a href="' .  get_post_permalink($post_id) . '" class="btn">Lire la suite</a>
 </div>
 </div>' .'<br/>'; // On affiche le post
 }

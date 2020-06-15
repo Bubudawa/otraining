@@ -8,8 +8,9 @@ Template Name: Devenir Formateur
 
 
 <div class="login-text">
-    <h2>Devenir Formateur</h2>
-    <p>Si vous avez déjà un compte : <a href="<?php echo home_url(); ?>/connexion">cliquez ici pour vous connecter</a>.</p>
+    <h1>Devenez Formateur</h1>
+    <p><em>Pour proposer vos Formations</em>, vous êtes au bon endroit !</p>
+    <p><em>Créez votre compte</em> ne prend que quelques instants.</p> 
 </div>
 
 <div class="login__container">
@@ -37,8 +38,8 @@ else {
 
 
 <div class="login-text">
-    <p>Si vous souhaitez plutôt suivre une formation ? 
-        <a href="<?php echo home_url(); ?>/inscription">cliquez ici pour vous incrire</a>.
+    <p>Vous souhaitez simplement <em>accéder à une formation et suivre des cours ?</em></p>
+    <p><a href="<?php echo home_url(); ?>/inscription">cliquez ici créer votre <em>compte élève</em></a>.
     </p>
 </div>
 

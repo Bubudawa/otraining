@@ -2,9 +2,9 @@
 <div class="test">
   <div class="card">
     <div class="card__image-holder">
-      <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+      <?php the_post_thumbnail() ?>
     </div>
-    <div class="card-title">
+    <div class="card-title"> 
         <span class="left"></span>
         <span class="right"></span>
       </a>
@@ -26,6 +26,6 @@
     </div>
   </div>
   <div class="card-actions">
-      <a href="<?php the_permalink();?>" class="btn">Voir plus</a>
+      <a href="<?php the_permalink();?>" class="btn" alt="<?php echo the_title() ?>">Détail de la formation</a>
   </div>
 </div>

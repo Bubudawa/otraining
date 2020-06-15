@@ -4,11 +4,11 @@ a.btn {
 	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
   color: $white;
   display: inline-block;
-  padding: 6px 30px 8px;
-  margin-top: 15px;
+  padding: 6px 30px;
+  margin-top: 5px;
   position: relative;
   text-decoration: none;
-	transition: all 0.1s 0s ease-out;
+  transition: all 0.1s 0s ease-out;
 }
 .p-connexion{
   margin-top:1em;
@@ -78,7 +78,7 @@ div.card {
     padding: 6px 15px 10px;
     position: relative;
     z-index: 0;
-    
+
     a.toggle-info {
       border-radius: 32px;
       height: 32px;
@@ -117,6 +117,8 @@ div.card {
       letter-spacing: -0.05em;
       margin: 0;
       padding: 0;
+      text-align: left !important;
+      font-family: Arial, sans-serif !important;
       
       small {
         display: block;

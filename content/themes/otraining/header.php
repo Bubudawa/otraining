@@ -3,6 +3,7 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri();?>/favicon.ico">
 
       <?php wp_head(); ?>
  
@@ -34,22 +35,22 @@
 
                   </div>
 
-                  <div class="col_1">
+                  <div class="col_2">
                                   
-                    <p>Nouveau sur le site ? Faite un tour sur nos formations 100% gratuites</p>
-                    <a href="<?php echo home_url(); ?>/inscription"><button class="col_button">Formations gratuite</button></a>
+                    <p>Nouveau sur le site ? Faite un tour sur nos formations gratuites :</p>
+                    <a href="<?php echo home_url(); ?>/catalogue"><button class="col_button">Formations gratuites</button></a>
                     <p>Vous souhaitez partager vos connaissances en creant facilement une formation ?</p>
                     <a href="<?php echo home_url(); ?>/devenir-formateur"><button class="col_button">Devenez Formateur</button></a>
 
                   </div>
 
-                  <div class="col_1">
+                  <div class="col_3">
               
-                    <p class= "strong">Eleves ou formateur, l'inscription à o'training est 100% gratuite !</p>
+                    <p class= "strong">L'inscription à O'training est 100% gratuite !</p>
                     <ul class="inline">
-                      <li><a href="<?php echo home_url(); ?>/a-propos">A propos</a></li>
-                      <li><a href="<?php echo home_url(); ?>/contact">Contact</a></li>
-                      <li><a href="<?php echo home_url(); ?>/besoin-daide">Aide</a></li>
+                    <li><a href="<?php echo home_url(); ?>/a-propos"><i class="fa fa-info-circle" aria-hidden="true"></i>A propos</a></li>
+                    <li><a href="<?php echo home_url(); ?>/contact"><i class="fa fa-envelope" aria-hidden="true"></i>Contact</a></li>
+                    <li><a href="<?php echo home_url(); ?>/besoin-daide"><i class="fa fa-question-circle" aria-hidden="true"></i>Aide</a></li>
 
                     </ul>
 

@@ -7,8 +7,9 @@ Template Name: Inscription
 <?php get_header(); ?>
 
 <div class="login-text">
-    <h2>Inscription</h2>
-    <p>Si vous avez déjà un compte : <a href="<?php echo home_url(); ?>/connexion">cliquez ici pour vous connecter</a>.</p>
+    <h1>Accédez gratuitement aux formations</h1>
+    <p><em>Créez votre compte</em> ne prend que quelques instants.</p>
+    <p>Vous pourrez alors choisir de <em>suivre les cours</em> que vous souhaitez.</p>
 </div>
 
 <div class="login__container">
@@ -22,6 +23,8 @@ Template Name: Inscription
         register_student_form();
     }
     else {
+        $logout = wp_logout_url(get_permalink());
+
         echo '<p>Vous êtes déjà connecté.</p>';
 
         echo '<p>Vous devez vous déconnecter pour créer un compte Elève.</p>';
@@ -35,9 +38,8 @@ Template Name: Inscription
 </div>
 
 <div class="login-text">
-    <p>Si vous souhaitez devenir formateur et pouvoir proposer vos formations : 
-        <a href="<?php echo home_url(); ?>/devenir-formateur">cliquez ici pour devenir formateur</a>.
-    </p>
+    <p>Vous souhaitez <em>devenir formateur</em> et <em>proposer vos formations</em> :</p> 
+    <p><a href="<?php echo home_url(); ?>/devenir-formateur">cliquez ici pour devenir formateur</a>.</p>
 </div>
 
 

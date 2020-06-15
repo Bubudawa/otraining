@@ -13,21 +13,27 @@
           <div class="footer__menu__catégories">
             <ul>
 
-            <?php dynamic_sidebar('aside'); ?>
+            <?php dynamic_sidebar('footer1'); ?>
 
             </ul>
           </div>
           <div class="footer__menu__menu">
             <ul>
+
+            <?php dynamic_sidebar('footer2'); ?>
+
               <li><a href="<?php echo home_url(); ?>"><i class="fa fa-home" aria-hidden="true"></i>Accueil</a></li>
-              <li><a href="<?php echo home_url(); ?>/catalogue"><i class="fa fa-suitcase" aria-hidden="true"></i>Formations</a></li>
+              <li><a href="<?php echo home_url(); ?>/catalogue"><i class="fa fa-suitcase" aria-hidden="true"></i>Catalogue</a></li>
               <li><a href="<?php echo home_url(); ?>/a-propos"><i class="fa fa-info-circle" aria-hidden="true"></i>A propos</a></li>
-              <li><a href="<?php echo home_url(); ?>/contact"><i class="fa fa-envelope-o" aria-hidden="true"></i>Contact</a></li>
+              <li><a href="<?php echo home_url(); ?>/contact"><i class="fa fa-envelope" aria-hidden="true"></i>Contact</a></li>
               <li><a href="<?php echo home_url(); ?>/besoin-daide"><i class="fa fa-question-circle" aria-hidden="true"></i>Aide</a></li>
             </ul>
           </div>
           <div class="footer__menu__session">
             <ul>
+
+            <?php dynamic_sidebar('footer3'); ?>
+
             <li><a href="<?php echo home_url(); ?>/inscription"><i class="fa fa-sign-in" aria-hidden="true"></i>S'inscrire</a></li>
               <li><a href="<?php echo home_url(); ?>/connexion"><i class="fa fa-user-circle" aria-hidden="true"></i>Se connecter</a></li>
               <li><a href="<?php echo home_url(); ?>/devenir-formateur"><i class="fa fa-user-plus" aria-hidden="true"></i>Devenez Formateur</a></li>
