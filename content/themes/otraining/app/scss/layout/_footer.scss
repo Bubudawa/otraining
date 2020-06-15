@@ -26,30 +26,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80325a73', e
 }
 
 
-.footer__teacher {
-    background-color: #182440;
-    display: flex;
-    flex-direction: column;
-    background-size: contain;
-    background-position: center;
 
-
-    img {
-        display: inline-block;
-        margin: auto;
-        width: 60%;
-    }
-
-
-    &__button {
-        text-align: center;
-
-
-        &__content {
-    
-        }
-    }
-}
 
 .widgettitle {
     padding: 1rem;

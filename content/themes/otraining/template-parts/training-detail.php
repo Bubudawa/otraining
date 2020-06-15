@@ -26,7 +26,7 @@
 elseif (is_user_logged_in() && allcontent() ==false){
     the_excerpt(); ?>
     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-        <input class="btn" type="submit" id="envoyer" name="envoyer" value="Souscrire">
+        <input class="btn button_sub" type="submit" id="envoyer" name="envoyer" value="Souscrire">
     <form>
     <?php if(!empty($_POST['envoyer'])) {
     subscribephp();

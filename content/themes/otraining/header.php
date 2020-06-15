@@ -6,7 +6,7 @@
       <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri();?>/favicon.ico">
 
       <?php wp_head(); ?>
- 
+
     </head>
 
     <body>
