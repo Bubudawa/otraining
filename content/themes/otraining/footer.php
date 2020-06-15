@@ -1,13 +1,6 @@
 <footer>
-      <section class="footer__teacher">
-        <img src="images/laptop.png" alt="">
-        <div class="footer__teacher__button">
-          <a href="#">
-            <button class="footer__teacher__button__content button">Devenez Formateur</button>
-          </a>
-        </div>
-      </section>
-
+      <div class="footer__mobile">
+      </div>
       <section class="footer-wrapper">
       <div class="footer__menu">
           <div class="footer__menu__catégories">
@@ -24,7 +17,7 @@
 
               <li><a href="<?php echo home_url(); ?>"><i class="fa fa-home" aria-hidden="true"></i>Accueil</a></li>
               <li><a href="<?php echo home_url(); ?>/catalogue"><i class="fa fa-suitcase" aria-hidden="true"></i>Catalogue</a></li>
-              <li><a href="<?php echo home_url(); ?>/a-propos"><i class="fa fa-info-circle" aria-hidden="true"></i>A propos</a></li>
+              <li><a href="<?php echo home_url(); ?>/a-propos"><i class="fa fa-info-circle" aria-hidden="true"></i>À propos</a></li>
               <li><a href="<?php echo home_url(); ?>/contact"><i class="fa fa-envelope" aria-hidden="true"></i>Contact</a></li>
               <li><a href="<?php echo home_url(); ?>/besoin-daide"><i class="fa fa-question-circle" aria-hidden="true"></i>Aide</a></li>
             </ul>

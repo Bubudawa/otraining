@@ -95,6 +95,10 @@
     border: none;
 }
 
+.footer__mobile {
+    margin-top: 3rem;
+}
+
 
 @media (min-width: $breakpoint-medium)
  {
@@ -164,9 +168,6 @@
         
     }
 
-    .footer__teacher {
-        display: none !important;;
-    }
 
     .footer__menu {
         // border: red solid 2px;
@@ -263,7 +264,9 @@
         border-radius: 5px;
       }
        
-
+      .footer__mobile {
+        margin-top: 0;
+    }
 
 
  }

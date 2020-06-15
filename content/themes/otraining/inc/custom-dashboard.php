@@ -127,3 +127,40 @@ function seomix_adm_user_remove_post_counts($views) {
 }
 
 
+
+//Empeche les formateurs de voir les images qui ne sont pas les siennes.
+add_action('pre_get_posts','users_own_attachments');
+function users_own_attachments( $wp_query_obj ) {
+
+    global $current_user, $pagenow;
+
+    $is_attachment_request = ($wp_query_obj->get('post_type')=='attachment');
+
+    if( !$is_attachment_request )
+        return;
+
+    if( !is_a( $current_user, 'WP_User') )
+        return;
+
+    if( !in_array( $pagenow, array( 'upload.php', 'admin-ajax.php' ) ) )
+        return;
+
+    if( !current_user_can('delete_pages') )
+        $wp_query_obj->set('author', $current_user->ID );
+
+    return;
+}
+
+
+function remove_archcate_for_teacher() {
+
+  // global $pagenow;
+    // $user = wp_get_current_user();
+ 
+    if (!current_user_can('update_plugins')) {
+        remove_meta_box('archcatediv', 'formation', 'normal');
+
+    }
+}
+
+add_action('admin_menu', 'remove_archcate_for_teacher');

@@ -2571,6 +2571,9 @@ header {
   padding: 0.5rem;
   border: none; }
 
+.footer__mobile {
+  margin-top: 3rem; }
+
 @media (min-width: 500px) {
   .wrapper {
     display: flex;
@@ -2612,8 +2615,6 @@ header {
     .footer-wrapper a:hover {
       text-decoration: underline;
       color: #A3BFD9; }
-  .footer__teacher {
-    display: none !important; }
   .footer__menu {
     display: flex;
     justify-content: space-around; }
@@ -2668,7 +2669,9 @@ header {
     margin-top: 3rem;
     padding: 0 4rem 4rem 4rem;
     border: #ffffff solid 1px;
-    border-radius: 5px; } }
+    border-radius: 5px; }
+  .footer__mobile {
+    margin-top: 0; } }
 
 .navbar__burger {
   visibility: hidden; }
@@ -2687,19 +2690,6 @@ header {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80325a73', endColorstr='#d4335c76',GradientType=0 );
   /* IE6-9 */
   border-top: #ffffff 0.1rem solid; }
-
-.footer__teacher {
-  background-color: #182440;
-  display: flex;
-  flex-direction: column;
-  background-size: contain;
-  background-position: center; }
-  .footer__teacher img {
-    display: inline-block;
-    margin: auto;
-    width: 60%; }
-  .footer__teacher__button {
-    text-align: center; }
 
 .widgettitle {
   padding: 1rem;
@@ -3140,7 +3130,8 @@ div.cards {
   max-width: 960px;
   text-align: center;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .test {
   margin: 0;
