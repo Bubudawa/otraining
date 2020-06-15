@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "8adb705e84dd6d381dbb";
+/******/ 	var hotCurrentHash = "fd47a564d95d12737f03";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -928,9 +928,6 @@
     const closeModalByWrapper = document.querySelector('.wrapper');
     closeModalByWrapper.addEventListener('click', app.handleCloseMenu);
 
-    const filterSelectedFirst = document.querySelector('.categories-dynamique__list-one');
-    filterSelectedFirst.addEventListener('click', app.firstFilter);
-
   },
 
 
@@ -951,15 +948,7 @@
     seeBurgerModal.classList.remove('fs');
     const seeBurgerCross = document.querySelector('.menu-bg');
     seeBurgerCross.classList.remove('fs');
-  },
-
-  firstFilter: function(){
-    const seeFirstFilter = document.querySelector('.categories-dynamique__list-one');
-    seeFirstFilter.classList.add('active');
-    app.log();
   }
-
-
 };
 
 $(app.init);
