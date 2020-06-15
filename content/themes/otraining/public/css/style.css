@@ -3105,7 +3105,7 @@ body, html {
       opacity: 1;
       margin-top: 2.3rem; }
 
-a.btn {
+.btn {
   background: #0096a0;
   border-radius: 4px;
   box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
@@ -3300,6 +3300,9 @@ span {
 
 .single_training-content {
   line-height: 1.5em; }
+
+.single_training_image {
+  padding: 1em; }
 
 .fa {
   height: 2rem;
