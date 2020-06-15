@@ -62,7 +62,7 @@ function add_teacher() {
 		$user = wp_signon( $creds, false );
 
 		// Redirection
-		wp_redirect( site_url( '/wp-admin/?message=welcome' ) );
+		wp_redirect( home_url( '/wp/wp-admin?message=welcome' ) );
 		exit();
 	}
 }
@@ -94,7 +94,8 @@ function show_teacher_registration_message() {
 				echo wp_sprintf( $wrapper, 'Votre profil \'a pas été mis à jour. L\'adresse email est déjà utilisée.' );
 				break;
 			case 'welcome':
-				echo wp_sprintf( $wrapper, 'Votre compte a été créé. Vous allez recevoir un email de confirmation.' );
+				echo wp_sprintf( $wrapper, 'Votre compte a bien été créé. Vous êtes connecté.' );
+				// Votre compte a été créé. Vous allez recevoir un email de confirmation.
 				break;
 			default :
 		}

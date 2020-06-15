@@ -22,7 +22,7 @@ $wpquerySearch = new WP_Query($args);
 $count = $wpquerySearch->found_posts; ?>
 
 <div class="search-count">
-<h2>Résultats de recherche :</h2>
+<h1>Résultats de recherche :</h1>
 
 
 <h3><?php 

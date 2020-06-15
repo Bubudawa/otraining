@@ -1,9 +1,19 @@
 <?php get_header(); ?>
+
+
+<?php
+
+    $term = get_queried_object()->name;
+
+?>
+
+<h1>Les Formations en <?php echo $term ?></h1>
+
 <div class="cards">
 
 <?php
 
-$term = get_queried_object()->name;
+
 // var_dump($term);
 
     $args = array(

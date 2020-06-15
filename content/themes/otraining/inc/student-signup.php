@@ -62,7 +62,7 @@ function add_student() {
 		$user = wp_signon( $creds, false );
 
 		// Redirection
-		wp_redirect( site_url( 'wp/wp-admin/?message=welcome' ) );
+		wp_redirect( home_url('?message=welcome') );
 		exit();
 	}
 }
@@ -91,7 +91,7 @@ function show_student_registration_message() {
 				echo wp_sprintf( $wrapper, 'Votre profil \'a pas été mis à jour. L\'adresse email est déjà utilisée.' );
 				break;
 			case 'welcome':
-				echo wp_sprintf( $wrapper, 'Votre compte a été créé. Vous allez recevoir un email de confirmation.' );
+				echo wp_sprintf( $wrapper, 'Votre compte a bien été créé. Vous êtes connecté.' );
 				break;
 			default :
 		}

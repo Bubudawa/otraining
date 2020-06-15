@@ -34,7 +34,8 @@ foreach($see as $key =>$value){
     $the_content = get_the_excerpt($post_id); // On récupère le contenu du post
 
    echo '<div class="single_training">
-   <img class="single_training_image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+   <div class="single_training_image">'.$the_thumb.' 
+   </div>
    <div class="single_training-content">
 
    <div class="single_training_title">

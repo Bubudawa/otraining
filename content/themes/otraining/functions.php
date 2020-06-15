@@ -18,6 +18,7 @@ require('inc/teacher-signup.php');
 
 require('inc/search.php');
 
+
 //in order to have the models pages
 function login_model() {
     add_theme_support(
@@ -86,7 +87,7 @@ $taxonomy = 'archcate_';
 ?>
         <li class="list-term-archcate">
         
-        <a href="<?php echo home_url(); ?>/archcate/<?php echo $term->name;?>"><?php echo $icon;?><?php echo $term->name;?></a>
+        <a href="<?php echo home_url(); ?>/archcate/<?php echo $term->slug;?>"><?php echo $icon;?><?php echo $term->name;?></a>
         </li>
 <?php
     }
@@ -105,5 +106,3 @@ $taxonomy = 'archcate_';
         endif;
     }
     add_action( 'admin_menu', 'categorie_remove_menu_items' );
-
-
