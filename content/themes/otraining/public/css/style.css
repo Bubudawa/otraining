@@ -2753,6 +2753,9 @@ header {
   font-size: 1.5em;
   font-weight: bold; }
 
+.image-holder-page {
+  padding: 1em; }
+
 /* 
   Login
 */
@@ -3262,9 +3265,6 @@ div.card.show {
     transition: all 0.3s 0s ease-out; }
   div.card.show div.flap2 {
     transition: all 0.3s 0.2s ease-out; }
-
-.size-post-thumbnail {
-  padding: 1em; }
 
 #trainings {
   display: flex;
