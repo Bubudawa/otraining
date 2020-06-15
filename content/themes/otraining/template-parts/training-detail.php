@@ -2,7 +2,9 @@
 
 
 <div class="single_training">
+    <div class="image-holder-page">
         <?php the_post_thumbnail() ?>
+        </div>
         <div class="single_training-content">
 
         <div class="single_training_title">
