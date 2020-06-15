@@ -2437,6 +2437,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover; }
   .banner__title {
+    color: white !important;
     font-size: 1.8rem;
     margin: 1rem; }
   .banner__content {
@@ -3261,6 +3262,9 @@ div.card.show {
     transition: all 0.3s 0s ease-out; }
   div.card.show div.flap2 {
     transition: all 0.3s 0.2s ease-out; }
+
+.size-post-thumbnail {
+  padding: 1em; }
 
 #trainings {
   display: flex;

@@ -6,7 +6,7 @@ Template Name: Mes formations
 <?php get_header(); ?>
 
 <h1>Mes Formations</h1>
-<h2>Vous trouverez ici toutes les formations auxquels vous avez accès.</h2>
+<h2>Vous trouverez ici toutes les formations auxquelles vous avez accès.</h2>
 
 <?php
 
