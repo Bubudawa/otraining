@@ -37,10 +37,10 @@
 
                   <div class="col_2">
                                   
-                    <p>Nouveau sur le site ? Faite un tour sur nos formations gratuites :</p>
+                    <p>Nouveau sur le site ? Faites un tour sur nos formations gratuites :</p>
                     <a href="<?php echo home_url(); ?>/catalogue"><button class="col_button">Formations gratuites</button></a>
-                    <p>Vous souhaitez partager vos connaissances en creant facilement une formation ?</p>
-                    <a href="<?php echo home_url(); ?>/devenir-formateur"><button class="col_button">Devenez Formateur</button></a>
+                    <p>Vous souhaitez partager vos connaissances en créant facilement une formation ?</p>
+                    <a href="<?php echo home_url(); ?>/devenir-formateur"><button class="col_button">Devenez formateur</button></a>
 
                   </div>
 
@@ -48,7 +48,7 @@
               
                     <p class= "strong">L'inscription à O'training est 100% gratuite !</p>
                     <ul class="inline">
-                    <li><a href="<?php echo home_url(); ?>/a-propos"><i class="fa fa-info-circle" aria-hidden="true"></i>A propos</a></li>
+                    <li><a href="<?php echo home_url(); ?>/a-propos"><i class="fa fa-info-circle" aria-hidden="true"></i>À propos</a></li>
                     <li><a href="<?php echo home_url(); ?>/contact"><i class="fa fa-envelope" aria-hidden="true"></i>Contact</a></li>
                     <li><a href="<?php echo home_url(); ?>/besoin-daide"><i class="fa fa-question-circle" aria-hidden="true"></i>Aide</a></li>
 

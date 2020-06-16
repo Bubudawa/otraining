@@ -9,8 +9,8 @@ Template Name: Devenir Formateur
 
 <div class="login-text">
     <h1>Devenez Formateur</h1>
-    <p><em>Pour proposer vos Formations</em>, vous êtes au bon endroit !</p>
-    <p><em>Créez votre compte</em> ne prend que quelques instants.</p> 
+    <p><em>Pour proposer vos formations</em>, vous êtes au bon endroit !</p>
+    <p><em>Créer votre compte</em> ne prend que quelques instants.</p> 
 </div>
 
 <div class="login__container">
@@ -27,7 +27,7 @@ else {
 
     echo '<p>Vous êtes déjà connecté.</p>';
     echo '<p>Vous devez vous déconnecter pour créer un compte Formateur.</p>';
-    echo '<p class="login_link"><a href="' . $logout . '">cliquez ici pour vous déconnecter.</a></p>';
+    echo '<p class="login_link"><a href="' . $logout . '">Cliquez ici pour vous déconnecter.</a></p>';
 }
 
 ?>
@@ -39,7 +39,7 @@ else {
 
 <div class="login-text">
     <p>Vous souhaitez simplement <em>accéder à une formation et suivre des cours ?</em></p>
-    <p><a href="<?php echo home_url(); ?>/inscription">cliquez ici créer votre <em>compte élève</em></a>.
+    <p><a href="<?php echo home_url(); ?>/inscription">Cliquez ici pour créer votre <em>compte élève</em></a>.
     </p>
 </div>
 

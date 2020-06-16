@@ -106,3 +106,19 @@ $taxonomy = 'archcate_';
         endif;
     }
     add_action( 'admin_menu', 'categorie_remove_menu_items' );
+
+
+
+function wpse22764_gettext( $translation, $original )
+{
+    if ( 'Excerpt' == $original ) {
+        return 'Introduction de la Formation';
+    }else{
+        $pos = strpos($original, 'Excerpts are optional hand-crafted summaries of your');
+        if ($pos !== false) {
+            return  'l\'introduction est ce que le visiteur verra en premier, donnez leur envie de rejoindre votre formation.';
+        }
+    }
+    return $translation;
+}
+add_filter( 'gettext', 'wpse22764_gettext', 10, 2 );

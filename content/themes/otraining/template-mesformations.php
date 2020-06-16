@@ -33,6 +33,9 @@ foreach($see as $key =>$value){
     $the_title = $the_post->post_title; // On récupère le titre du post
     $the_content = get_the_excerpt($post_id); // On récupère le contenu du post
 
+$post_author_id = get_post_field( 'post_author', $post_id);
+$display_name = get_the_author_meta( 'display_name' , $post_author_id);
+
    echo '<div class="single_training">
    <div class="single_training_image">'.$the_thumb.' 
    </div>
@@ -41,7 +44,7 @@ foreach($see as $key =>$value){
    <div class="single_training_title">
        <h2>
            '. $the_title .'
-           <small>avec <?php the_author_link(); ?></small>
+           <small>avec<span> '. $display_name .'</span></small>
        </h2>
    </div>
    <div class="single_training_content">
