@@ -26,7 +26,7 @@ $user = get_current_user_id();
 function subscribephp(){
     $post_id = url_to_postid(get_permalink());
     $user = get_current_user_id();
-    $pdo = new PDO('mysql:host=ec2-3-88-230-190.compute-1.amazonaws.com;dbname=Otraining', 'training', 'training1234');
+    $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASSWORD);
     $reponse = $pdo->query('SELECT user_id, formation_id FROM wp_subscribers WHERE user_id = '.$user.' AND formation_id = '.$post_id);
     $donnees_exist =$reponse->fetch();
     if ($donnees_exist == false) {
@@ -46,7 +46,7 @@ function subscribephp(){
 
 function mytrainings(){
     $user = get_current_user_id();
-$pdo = new PDO('mysql:host=ec2-3-88-230-190.compute-1.amazonaws.com;dbname=Otraining', 'training', 'training1234');
+    $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASSWORD);
 $stmt = $pdo->prepare('SELECT * FROM wp_subscribers WHERE (user_id) = '.$user.'');
 $stmt->execute();
 
@@ -58,7 +58,7 @@ return $result;
 function allcontent(){
     $post_id = url_to_postid(get_permalink());
     $user = get_current_user_id();
-    $pdo = new PDO('mysql:host=ec2-3-88-230-190.compute-1.amazonaws.com;dbname=Otraining', 'training', 'training1234');
+    $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASSWORD);
     $reponse = $pdo->query('SELECT user_id, formation_id FROM wp_subscribers WHERE user_id = '.$user.' AND formation_id = '.$post_id);
     $donnees_exist =$reponse->fetch();
 
